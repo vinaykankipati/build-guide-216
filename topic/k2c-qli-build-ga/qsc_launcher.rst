@@ -78,7 +78,7 @@ Use QSC Launcher
          * - **Access level**
            - **Distribution**
            - Yocto layers
-         * - :rspan:`2` Public developer (unregistered)
+         * - :rspan:`2` Public developers (unregistered)
            - Base build: High-level operating system (OS) and prebuilt firmware (GPS only)       
              
              ``Qualcomm_Linux.SPF.1.0|TEST|DEVICE|PUBLIC``
@@ -117,7 +117,7 @@ Use QSC Launcher
              ``meta-qcom-robotics-sdk``
              
              ``meta-qcom-qim-product-sdk``
-         * - :rspan:`2` Registered developer from a verified organization
+         * - :rspan:`2` Licensed developers with Authorized access
            - Base build: High-level OS and firmware source (GPS only)
              
              ``Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|NoModem``
@@ -170,7 +170,7 @@ Use QSC Launcher
              ``meta-qcom-robotics-sdk``
              
              ``meta-qcom-qim-product-sdk``
-         * - :rspan:`3` Licensed developer with additional access
+         * - :rspan:`3` Licensed developers (contact Qualcomm for access)
            - Base build: High-level OS and firmware (GPS only) source
              
              ``Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|``
@@ -246,12 +246,10 @@ Use QSC Launcher
              - Contains reference distribution configuration for Qualcomm products, image recipes, and package groups.
 	  
            * - ``meta-qcom-extras``
-             - Enables source compilation of select components, which are otherwise present as binary in ``meta-qcom-hwe``. This
-               layer is an optional metadata layer for registered users.
+             - Enables source compilation of select components, which are otherwise present as binary in ``meta-qcom-hwe``. This layer is an optional metadata layer for registered developers.
 	  
            * - ``meta-qcom-qim-product-sdk``
-             - Provides Qualcomm's multimedia and AI SDKs based GStreamer framework. It includes a set of GStreamer plugin sample
-               applications for multimedia and AI use cases.
+             - Provides Qualcomm's multimedia and AI SDKs based GStreamer framework. It includes a set of GStreamer plugin sample applications for multimedia and AI use cases.
 	  
            * - ``meta-ros``
              - Contains a series of OpenEmbedded layers to add support for the Robot Operating System (ROS) for embedded Linux releases by the Yocto Project.
@@ -266,21 +264,17 @@ Use QSC Launcher
              - Contains the proprietary robotics recipes that are built with source.
 	  
            * - ``meta-qcom-robotics-sdk``
-             - Contains the generation mechanism (package of cross-compile toolchain, script, and function SDK) and pick-up mechanism (necessary files from QIMP SDK, QNN
-               SDK, and QIRF SDK through ``config.json``) of Robotics Product SDK.
+             - Contains the generation mechanism (package of cross-compile toolchain, script, and function SDK) and pick-up mechanism (necessary files from QIMP SDK, QNN SDK, and QIRF SDK through ``config.json``) of Robotics Product SDK.
     
 6.  Click **Download** to download the selected software:
 
     .. image:: ../../media/k2c-qli-build-ga/Download_button_exists_page.png
 
-    The **Download** page displays the download progress. Download
-    progress is also available in the top menu bar **Downloads** option
-    in the Chip Software section.
+    The **Download** page displays the download progress. Download progress is also available in the top menu bar **Downloads** option in the Chip Software section.
 
 .. _concept_n2t_tjn_w1c_step7:
 
-7.  To start compilation after the download completes, select
-    **Compile** (depending on the size of the downloaded software and host machine configuration, compilation may take a few hours):
+7.  To start compilation after the download completes, select **Compile** (depending on the size of the downloaded software and host machine configuration, compilation may take a few hours):
 
     .. image:: ../../media/k2c-qli-build-ga/qsc_launcher_compile.png
 
@@ -306,7 +300,8 @@ Use QSC Launcher
     .. note::
       
        * ``<Base_Workspace_Path>`` is the path that you select on the **Select Resources** page.
-       * BitBake fetch errors are typically intermittent fetch failures. Retry :ref:`step 7 <concept_n2t_tjn_w1c_step7>` to work around these intermittent errors. If the issue persists, see :ref:`BitBake Fetcher Error <do_fetch_error_1>` for a solution.
+       * BitBake fetch errors are typically intermittent fetch failures.
+         Retry :ref:`step 7 <concept_n2t_tjn_w1c_step7>` to work around these intermittent errors. If the issue persists, see :ref:`BitBake Fetcher Error <do_fetch_error_1>` for a solution.
 
 9.  To incorporate changes made after the compilation step is complete, click **Retry** to recompile:
 
@@ -339,7 +334,8 @@ To flash software to the device with Launcher, perform the following steps:
 
    .. image:: ../../media/k2c-qli-build-ga/flash_launcher_flashComplete.png
 
-5. Click **Done**. To connect to the device, see :ref:`How to SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.
+5. Click **Done**. To connect to the device, 
+   see :ref:`How to SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.
 
 
 

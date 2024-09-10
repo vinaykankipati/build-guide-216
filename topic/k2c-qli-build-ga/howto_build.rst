@@ -68,7 +68,7 @@ environment and generate eSDK:
 2. After building with ``meta-qcom-extras`` and firmware sources with
    QSC CLI:
 
-   .. note:: This step is not applicable for unregistered users.
+   .. note:: This step is not applicable for public developers (unregistered).
 
    ::
 

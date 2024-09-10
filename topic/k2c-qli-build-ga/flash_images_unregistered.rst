@@ -126,54 +126,69 @@ EDL mode, use any one of the following methods:
 
 **Manual**
 
-1. Press and hold the **F_DL** button:
+.. tabs::
 
-   .. image:: ../../media/k2c-qli-build-ga/RB3Gen2_device.jpg
+   .. tab:: QCS6490/QCS5430
 
-2. Connect the device to a +12 V wall power supply.
+      1. Press and hold the **F_DL** button:
 
-3. Connect the device to the host system using a Type-C cable through
-   the USB Type-C connector.
+         .. image:: ../../media/k2c-qli-build-ga/RB3Gen2_device.jpg
 
-4. Release the **F_DL** button. The device should now be in Qualcomm
-   download (QDL) mode. For this task, QDL is used interchangeably with
-   EDL.
+      #. Connect the device to a +12 V wall power supply.
 
-5. Verify whether the device has entered the QDL mode:
+      #. Connect the device to the host system using a Type-C cable through the USB Type-C connector.
+      
+      #. Release the **F_DL** button. The device should now be in Qualcomm download (QDL) mode. For this task, QDL is used interchangeably with EDL.
+      
+      #. Verify whether the device has entered the QDL mode:
 
-   ::
+         ::
 
-      lsusb
+            lsusb
 
-   **Sample output**
+         **Sample output**
 
-   ::
+         ::
 
-      Bus 002 Device 014: ID 05c6:9008 Qualcomm, Inc. Gobi Wireless Modem (QDL mode)
+            Bus 002 Device 014: ID 05c6:9008 Qualcomm, Inc. Gobi Wireless Modem (QDL mode)
+
+   .. tab:: QCS9075
+
+      1. Switch on the dip switch S5-4 for EDL mode as shown in the following figure:
+
+         .. image:: ../../media/k2c-qli-build-ga/qcs9075_qdl_mode_manual.png
+
+      #. Verify whether the device has entered the QDL mode:
+
+         ::
+
+            lsusb
+
+         **Sample output**
+
+         ::
+
+            Bus 002 Device 014: ID 05c6:9008 Qualcomm, Inc. Gobi Wireless Modem (QDL mode)
+
+      #. Switch off the dip switch S5-4 after the flashing completes.
 
 .. _section_byn_pdj_x1c:
 
 Flash software using QDL
 ------------------------------------
 
-.. note:: Prerequisites for using QDL:
+.. note:: Prerequisites
    
    - The modules ``make`` and ``gcc`` must be available.
    - Install the following dependent packages:
 
-   ::
+     ::
 
-      sudo apt-get install git libxml2-dev libusb-1.0-0-dev pkg-config
-   ::
+       sudo apt-get install git libxml2-dev libusb-1.0-0-dev pkg-config
+
 1. Ensure ModemManager is not running.
 
-   Some Linux distributions come with ModemManager, a tool for
-   configuring mobile broadband. When the device is connected in USB
-   mode, it is identified as a Qualcomm modem, and ModemManager tries to
-   configure the device. As this interferes with QDL flashing, you must
-   disable ModemManager before connecting your device. If you are using
-   a Linux distribution with ``systemd``, then ModemManager can be
-   stopped using the following command:
+   Some Linux distributions come with ModemManager, a tool for configuring mobile broadband. When the device is connected in USB mode, it is identified as a Qualcomm modem, and ModemManager tries to configure the device. As this interferes with QDL flashing, you must disable ModemManager before connecting your device. If you are using a Linux distribution with ``systemd``, then ModemManager can be stopped using the following command:
 
    ::
 
@@ -232,13 +247,7 @@ Flash software using QDL
           2. Disconnect from the host.
           3. Reboot the host.
 
-          Do not move the QDL tool from this location to another alternate path or
-          host PC. If you must use the standalone QDL, see :ref:`How to build a standalone QDL <how_to_build_qdl_standalone>`.
-          To connect to the device, see :ref:`How to SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.
+          Do not move the QDL tool from this location to another alternate path or host PC. If you must use the standalone QDL, see :ref:`How to build a standalone QDL <how_to_build_qdl_standalone>`. To connect to the device, see :ref:`How to SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.
 
 
-.. note:: The device reboots on successful completion of the flashing
-          procedure. To verify the updated software version, 
-          see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-253/ubuntu_host.html#sub$check_sw_version_uart>`__.
-
-
+.. note:: The device reboots on successful completion of the flashing procedure. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-253/ubuntu_host.html#sub$check_sw_version_uart>`__.

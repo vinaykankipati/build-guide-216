@@ -12,7 +12,7 @@ Download
 ^^^^^^^^^^^^^^
 
 .. note::
-    If you are building a distribution with access level “Registered developer from a verified organization” or “Licensed developer with additional access”, then you must log in to ``qpm-cli`` before you compile:
+    If you are building a distribution with access level “Licensed developers with Authorized access” or “Licensed developers (contact Qualcomm for access)”, then you must log in to ``qpm-cli`` before you compile:
 
     ::
 
@@ -65,7 +65,7 @@ Download
       * - Access level
         - Distribution
         - Yocto layers
-      * - :rspan:`2` Unregistered/community developer
+      * - :rspan:`2` Public developers (unregistered)
         - Base build: High-level operating system (OS) and prebuilt firmware (GPS only)
            
           ``Qualcomm_Linux.SPF.1.0|TEST|DEVICE|PUBLIC``
@@ -104,7 +104,7 @@ Download
           ``meta-qcom-robotics-sdk``
           
           ``meta-qcom-qim-product-sdk``
-      * - :rspan:`2` Registered developer from a verified organization
+      * - :rspan:`2` Licensed developers with Authorized access
         - Base build: High-level OS and firmware source (GPS only)
           
           ``Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|NoModem``
@@ -151,7 +151,7 @@ Download
           ``meta-qcom-robotics-sdk``
           
           ``meta-qcom-qim-product-sdk``
-      * - :rspan:`3` Licensed developer with additional access
+      * - :rspan:`3` Licensed developers (contact Qualcomm for access)
         - Base build: High-level OS and firmware (GPS only) source
           
           ``Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|``
