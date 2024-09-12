@@ -19,8 +19,7 @@ required software tools are ready.
       sudo apt update
       sudo apt install repo gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm python3-subunit mesa-common-dev zstd liblz4-tool locales tar python-is-python3 file libxml-opml-simplegen-perl vim whiptail
 
-2. Add your Qualcomm login ID with Personalized Access Token (PAT) to
-   the ``.netrc`` file in your home directory:
+#. Add your Qualcomm login ID with Personalized Access Token (PAT) to the ``~/.netrc`` file in your home directory:
 
    ::
 
@@ -34,13 +33,13 @@ required software tools are ready.
 
 
    .. note::
-        | user@hostname:/local/mnt/workspace$ qsc-cli pat –get
+        | user@hostname:/local/mnt/workspace$ qsc-cli pat --get
         | [Info]: Starting qsc-cli version 0.0.0.9
         | **5LThNlklb55mMVLB5C2KqUGU2jCF**
 
-   ::
+#. Use your preferred text editor to edit ``~/.netrc`` and add the following entries:
 
-        vim ~/.netrc # add the following entries
+   ::
 
         machine chipmaster2.qti.qualcomm.com
         login <your Qualcomm login id>

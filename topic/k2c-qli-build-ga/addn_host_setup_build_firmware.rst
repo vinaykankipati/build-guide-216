@@ -14,8 +14,7 @@ required software tools are ready.
       sudo apt install repo gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm python3-subunit mesa-common-dev zstd liblz4-tool locales tar python-is-python3 file libxml-opml-simplegen-perl vim whiptail
       sudo apt-get install lib32stdc++6 libncurses5 checkinstall libreadline-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev curl
 
-2. Add your Qualcomm login ID with PAT to the ``.netrc`` file in your
-   home directory:
+#. Add your Qualcomm login ID with PAT to the ``~/.netrc`` file in your home directory:
 
    ::
 
@@ -28,13 +27,13 @@ required software tools are ready.
       # Qualcomm Proprietary repositories. This token expires in two weeks.
 
    .. note::
-      | user@hostname:/local/mnt/workspace$ qsc-cli pat –get
+      | user@hostname:/local/mnt/workspace$ qsc-cli pat --get
       | [Info]: Starting qsc-cli version 0.0.0.9
       | **5LThNlklb55mMVLB5C2KqUGU2jCF**
 
-   ::
+#. Use your preferred text editor to edit ``~/.netrc`` and add the following entries:
 
-      vim ~/.netrc # add the following entries
+   ::
 
       machine chipmaster2.qti.qualcomm.com
       login <your Qualcomm login id>
@@ -44,7 +43,7 @@ required software tools are ready.
       login <your Qualcomm login id>
       password <your PAT token>
 
-3. Set up the locales (if not set up already):
+#. Set up the locales (if not set up already):
 
    ::
 
@@ -53,7 +52,7 @@ required software tools are ready.
       export LC_ALL=en_US.UTF-8
       export LANG=en_US.UTF-8
 
-4. Update git configurations:
+#. Update git configurations:
 
    ::
 
@@ -78,7 +77,7 @@ required software tools are ready.
       git config --global http.https://chipmaster2.qti.qualcomm.com.followRedirects true
       git config --global http.https://qpm-git.qualcomm.com.followRedirects true
 
-5. Set up Python 3.10.2:
+#. Set up Python 3.10.2:
 
    .. note:: Skip the following instructions if you already have python 3.10.2 or later versions.
 

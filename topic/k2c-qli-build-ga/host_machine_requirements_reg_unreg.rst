@@ -3,6 +3,8 @@
 Host machine requirements
 -------------------------------
 
+.. tabularcolumns:: |p{4cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|
+
 .. flat-table::
    :header-rows: 2
    :class: longtable table-wrap
@@ -15,9 +17,7 @@ Host machine requirements
 
    * - **Linux**
      - **Windows**
-     - **Mac**
-      
-      
+     - **Mac**      
 
    * - x86 machine
      - x86 machine
@@ -27,7 +27,7 @@ Host machine requirements
 
    * - Quad-core CPU, for example, Intel i7-2600 at 3.4 GHz
        (equivalent or better)
-     - 16-core CPU
+     - 8-core CPU
      - 8-core CPU
      - Git 1.8.3.1 or later versions
       
@@ -39,7 +39,7 @@ Host machine requirements
       
 
    * - 16 GB RAM
-     - 16 GB RAM
+     - 8 GB RAM
      - 8 GB RAM
      - GCC 7.5 or later versions
       

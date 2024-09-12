@@ -373,38 +373,32 @@ Build firmware
       
        **Build steps**
 
-       1. For compiling Boot, you need the device tree compiler in the /pkg/qct/software/boottools directory. Install the package:
+       1. Install the device tree compiler:
 
           ::
 
             sudo apt-get install device-tree-compiler
+            export DTC=/usr/bin
 
-       2. Copy the /usr/bin/dtc file to the /pkg/qct/software/boottools directory:
-
-          ::
-
-            sudo mkdir -p /pkg/qct/software/boottools
-            sudo cp -r /usr/bin/dtc /pkg/qct/software/boottools
-
-       3. Navigate to the following directory:
+       #. Navigate to the following directory:
 
           ::
 
             cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/BOOT.MXF.1.0.c1/
 
-       4. Install the dependencies:
+       #. Install the dependencies:
 
           ::
 
             python -m pip install -r boot_images/boot_tools/dtschema_tools/oss/requirements.txt
 
-       5. Clean the build:
+       #. Clean the build:
 
           ::
 
             python -u boot_images/boot_tools/buildex.py -t kodiak,QcomToolsPkg -v LAA -r RELEASE --build_flags=cleanall
 
-       6. Build the image:
+       #. Build the image:
 
           ::
 
@@ -544,13 +538,13 @@ Build firmware
 
              export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/sectoolsv2/ext/Linux/sectools
              export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/sectoolsv2/ext/Linux
-             # An example <product> is QCM6490.LE.1.0, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/).
+             # An example <product> is QCS9100.LE.1.0, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/).
 
        -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™`:
 
           ::
 
-             qpm-cli --extract hexagon8.4 --version 8.4.07
+             qpm-cli --extract hexagon8.6 --version 8.6.05.2
              export HEXAGON_ROOT=$HOME/Qualcomm/HEXAGON_Tools
              echo $HEXAGON_ROOT
 
@@ -561,24 +555,39 @@ Build firmware
        **Tools required**
 
        -  Compiler version – Hexagon 8.6.05.2
-       -  Python version – Python 3.8.2+
+       -  Python version – Python 3.8.2
       
        **Build steps**
 
-       1. Navigate to the following directory:
+       1. Install the device tree compiler:
+
+          ::
+
+            sudo apt-get install device-tree-compiler
+            export DTC_PATH=/usr/bin
+
+       #. Install the dependencies:
+
+          ::
+
+            pip install ruamel.yaml==0.17.17
+            pip install dtschema==2021.10
+            pip install jsonschema==4.0.0
+
+       #. Navigate to the following directory:
 
           ::
 
              cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nomodem/DSP.AT.1.0/dsp_proc/build/ms
 
-       2. Clean the build:
+       #. Clean the build:
 
           ::
 
              python ./build_variant.py lemans.cdsp0.prod --clean
              python ./build_variant.py lemans.cdsp1.prod --clean
 
-       3. Build the image:
+       #. Build the image:
 
           ::
 
@@ -600,38 +609,32 @@ Build firmware
       
        **Build steps**
 
-       1. For compiling Boot, you need the device tree compiler in the /pkg/qct/software/boottools directory. Install the package:
+       1. Install the device tree compiler:
 
           ::
 
             sudo apt-get install device-tree-compiler
+            export DTC=/usr/bin
 
-       2. Copy the /usr/bin/dtc file to the /pkg/qct/software/boottools directory:
-
-          ::
-
-            sudo mkdir -p /pkg/qct/software/boottools
-            sudo cp -r /usr/bin/dtc /pkg/qct/software/boottools
-
-       3. Navigate to the following directory:
+       #. Navigate to the following directory:
 
           ::
 
             cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/BOOT.MXF.1.0.c1/
 
-       4. Install the dependencies:
+       #. Install the dependencies:
 
           ::
 
             python -m pip install -r boot_images/boot_tools/dtschema_tools/oss/requirements.txt
 
-       5. Clean the build:
+       #. Clean the build:
 
           ::
 
             python -u boot_images/boot_tools/buildex.py -t lemans,QcomToolsPkg - v LAA -r RELEASE --build_flags=cleanall
 
-       6. Build the image:
+       #. Build the image:
 
           ::
 
@@ -666,7 +669,7 @@ Build firmware
 
        .. rubric:: AOP firmware
 
-       The CPUCP firmware is released as a binary and build compilation is not required.
+       The AOP firmware is released as a binary and build compilation is not required.
 
        .. rubric:: CPUCP firmware
 
@@ -720,7 +723,8 @@ Build base image with extras
       git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1
       # Example, <meta-qcom-extras release tag> is r1.0_00046.0
       mkdir -p layers/meta-qcom-extras
-      cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/QCM6490.LE.1.0/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
+      cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
+      # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/).
 
    .. note:: For the ``<manifest release tag>`` and
             ``<meta-qcom-extras release tag>`` information, see the
@@ -801,8 +805,9 @@ Build QIMP SDK image with extras
       git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1
       # Example, <meta-qcom-extras release tag> is r1.0_00046.0
       mkdir -p layers/meta-qcom-extras
-      cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/QCM6490.LE.1.0/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
-      git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.38-QLI.1.2-Ver.1.0_qim-product-sdk-1.1.1 layers/meta-qcom-qim-product-sdk
+      cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
+      # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/).
+      git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.28-QLI.1.1-Ver.1.1_qim-product-sdk-1.1.3 layers/meta-qcom-qim-product-sdk
 
    .. note:: For the ``<manifest release tag>`` and
             ``<meta-qcom-extras release tag>`` information, see the *Build-critical release tags* section in the `Release
@@ -890,8 +895,9 @@ Build QIRP SDK image with extras
       # Example, <meta-qcom-extras release tag> is r1.0_00046.0
       mkdir -p layers/meta-qcom-extras
       mkdir -p layers/meta-qcom-robotics-extras
-      cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/QCM6490.LE.1.0/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
-      cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/QCM6490.LE.1.0/common/config/meta-qcom-robotics-extras/* layers/meta-qcom-robotics-extras/
+      cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
+      cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-robotics-extras/* layers/meta-qcom-robotics-extras/
+      # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/).
 
       git clone https://git.codelinaro.org/clo/le/meta-ros.git -b ros.qclinux.1.0.r1-rel layers/meta-ros
       git clone https://github.com/quic-yocto/meta-qcom-robotics.git layers/meta-qcom-robotics
