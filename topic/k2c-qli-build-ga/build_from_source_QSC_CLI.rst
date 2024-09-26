@@ -2,8 +2,8 @@
 
 .. rst_class:: flattenforhtml
 
-Build with QSC CLI
-========================================
+Build with QSC CLI (UPDATES IN PROGRESS. NOT TO BE TESTED)
+=============================================================
 
 The following sections provide instructions to configure, download, compile, and flash Qualcomm Linux
 using the QSC CLI.

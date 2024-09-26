@@ -18,7 +18,7 @@ Install QSC using a GUI
 
    .. image:: ../../media/k2c-qli-build-ga/qcs_launcher_gui.png
 
-2. Install the downloaded QSC Debian package using GDebi package installer:
+2. Install the downloaded QSC Debian package using the GDebi package installer:
 
    .. image:: ../../media/k2c-qli-build-ga/deb_gui_installer.png
 

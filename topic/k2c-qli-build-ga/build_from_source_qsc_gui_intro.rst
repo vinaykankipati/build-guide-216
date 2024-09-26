@@ -2,8 +2,8 @@
 
 .. rst_class:: flattenforhtml
 
-Build with QSC Launcher
-========================================
+Build with QSC Launcher (UPDATES IN PROGRESS. NOT TO BE TESTED)
+================================================================
 
 The following sections provide instructions to configure, download, compile, and flash Qualcomm Linux
 using the QSC Launcher.

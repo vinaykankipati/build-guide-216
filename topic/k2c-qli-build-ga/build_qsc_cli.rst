@@ -3,7 +3,7 @@
 Use QSC CLI
 ------------------
 
-This section provides instructions on how to configure, download, compile, and flash Qualcomm Linux using QSC CLI.
+This section provides instructions on how to configure, download, compile, and flash Qualcomm Linux using the QSC CLI.
 
 .. _section_ez3_31x_v1c:
 
@@ -46,13 +46,9 @@ Download
                    QCM6490.LE.1.0-00218-STD.PROD-1
 
 
-    -   Select the appropriate distribution to download. Access levels control the distribution access as shown in the following table:
+    -   Select the appropriate distribution to download. Access levels control the distribution access as shown in the following table:   
 
-   .. note:: 
-      - For more information on the available distributions, see the *Access Controlled Distribution* table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
-      - ``meta-selinux``, ``meta-virtualization``, ``meta-security``, ``meta-rust``, ``meta-openembedded``, and ``poky/meta`` are community layers that are common for all the distributions listed in the following access controlled distributions table. For more information on the Qualcomm Linux BSP layers, see `Qualcomm Linux Yocto Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-27/platform_software_features.html#sub$qualcomm_bsp_metadata_layers>`__.
-
-   .. flat-table:: Access controlled distributions
+     .. flat-table:: Access controlled distributions
       :widths: 24 24 24
       :header-rows: 1
       :class: longtable table-wrap
@@ -195,7 +191,10 @@ Download
           
           ``meta-qcom-qim-product-sdk``
       
-   For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.
+     .. note::
+      - For more information on the available distributions, see the *Access Controlled Distribution* table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
+      - ``meta-selinux``, ``meta-virtualization``, ``meta-security``, ``meta-rust``, ``meta-openembedded``, and ``poky/meta`` are community layers that are common for all the distributions listed in the following access controlled distributions table. For more information on the Qualcomm Linux BSP layers, see `Qualcomm Linux Yocto Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-27/platform_software_features.html#sub$qualcomm_bsp_metadata_layers>`__.
+      - For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.
 
 -  Start the download:
 
@@ -236,15 +235,14 @@ This process builds the necessary Qualcomm firmware and also completes the Qualc
 .. note:: 
    If you see a BitBake fetcher error, retry compilation to work around this error. If the issue persists, see :ref:`BitBake Fetcher Error <do_fetch_error_1>` for a solution.
 
-On a successful build of the ``qcom-wayland`` distributions, you can see
-the images at the following path:
+After a successful build of the ``qcom-wayland`` distributions, you can see the software images at the following path:
 
 ::
 
    # system.img is present at the following path
    <workspace_path>/DEV/LE.QCLINUX.1.0.r1/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/*
 
-On a successful build of the ``qcom-robotics-ros2-humble`` (QIRP) distribution, you can see the QIRP SDK build artifacts at the following paths:
+After a successful build of the ``qcom-robotics-ros2-humble`` (QIRP) distribution, you can see the QIRP SDK build artifacts at the following paths:
 
 ::
 

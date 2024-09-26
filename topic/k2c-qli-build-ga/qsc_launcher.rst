@@ -65,9 +65,6 @@ Use QSC Launcher
 
    d. Select the appropriate distribution to download. Access levels control the distribution access as shown in the following table:
 
-        .. note::  
-          For more information on the available distributions, see the **Access Controlled Distribution** table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
-
       .. flat-table:: Access controlled distributions
          :widths: 24 24 24
          :header-rows: 1
@@ -219,8 +216,8 @@ Use QSC Launcher
 	  
       .. note::
          
-         - For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.
-         
+         - For more information on the available distributions, see the **Access Controlled Distribution** table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
+         - For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.         
          - For more information on the QIMP and QIRP SDKs, see the following guides:
 
            - `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-51>`__
@@ -230,11 +227,11 @@ Use QSC Launcher
 
     .. image:: ../../media/k2c-qli-build-ga/Download_button_exists_page.png
 
-    The **Download** page displays the download progress. Download progress is also available in the top menu bar **Downloads** option in the Chip Software section.
+    The **Download** page displays the download progress.
 
 .. _concept_n2t_tjn_w1c_step7:
 
-7.  To start compilation after the download completes, select **Compile** (depending on the size of the downloaded software and host machine configuration, compilation may take a few hours):
+7.  Select **Compile** to start compiling (depending on the size of the downloaded software and host machine configuration, compilation may take a few hours):
 
     .. image:: ../../media/k2c-qli-build-ga/qsc_launcher_compile.png
 
@@ -242,14 +239,14 @@ Use QSC Launcher
 
     .. image:: ../../media/k2c-qli-build-ga/qsc_compile_progress.png
 
-    On a successful build of the ``qcom-wayland`` distributions, you can see the images at the following path:
+    After a successful build of the ``qcom-wayland`` distributions, you can see the software images at the following path:
 
     ::
 
        # system.img is present at the following path
        <Base_Workspace_Path>/DEV/LE.QCLINUX.1.0.r1/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/*
 
-    On a successful build of the ``qcom-robotics-ros2-humble`` (QIRP) distribution, you can see the QIRP SDK build artifacts at the following paths:
+    After a successful build of the ``qcom-robotics-ros2-humble`` (QIRP) distribution, you can see the QIRP SDK build artifacts at the following paths:
 
     ::
 

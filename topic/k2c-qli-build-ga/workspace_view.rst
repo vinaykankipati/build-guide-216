@@ -79,7 +79,7 @@ Images directory structure after successful build
 
    .. image:: ../../media/k2c-qli-build-ga/ws_standalone_5.png
 
-   The images directory files are described in the following table:
+   The files in the images directory are described in the following table:
 
    +-----------------------------+----------------------------------------+
    | Filename                    | Description                            |

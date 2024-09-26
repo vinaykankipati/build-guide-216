@@ -188,8 +188,7 @@ Build BSP image
       bitbake <image recipe>
       # Example, bitbake qcom-multimedia-image
 
-   On a successful build, you can check if ``system.img`` is present in the ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
-   directory:
+   After a successful build, you can verify if ``system.img`` is present in the ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image`` directory:
 
    ::
 
@@ -252,10 +251,7 @@ Build QIMP SDK image
       # Build SDK image
       bitbake qcom-qim-product-sdk
 
-   On a successful build, you can check if ``system.img`` is present in
-   the
-   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
-   directory:
+   After a successful build, you can verify if ``system.img`` is present in the ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image`` directory:
 
    ::
 
@@ -316,9 +312,9 @@ Build QIRP SDK image
 
       ../qirp-build qcom-robotics-full-image
 
-   On a successful build, you can see the QIRP SDK build artifacts at the following paths:
+   After a successful build, you can see the QIRP SDK build artifacts at the following paths:
 
-   ::
+   :
 
       QIRP SDK artifacts: <WORKSPACE DIR>/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/qirpsdk_artifacts/qirp-sdk_<version>.tar.gz
       # system.img is present in the following path
@@ -331,8 +327,7 @@ Build real-time Linux image
 
 1. Download Qualcomm Yocto and supporting layers:
 
-   .. note:: The ``<manifest release tag>`` for real-time Linux image is
-             the same as the BSP build. Clone the Real-time Linux on top of the BSP build.
+   .. note:: The ``<manifest release tag>`` for real-time Linux image is the same as the BSP build. Clone the Real-time Linux on top of the BSP build.
 
    ::
 
@@ -378,10 +373,7 @@ Build real-time Linux image
 
       bitbake qcom-multimedia-image
 
-   On a successful build, you can check if ``system.img`` is present in
-   the
-   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
-   directory:
+   After a successful build, you can verify if ``system.img`` is present in the ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image`` directory:
 
    ::
 

@@ -575,14 +575,17 @@ Build firmware
 
           ::
 
+             python ./build_variant.py lemans.adsp.prod --clean
              python ./build_variant.py lemans.cdsp0.prod --clean
              python ./build_variant.py lemans.cdsp1.prod --clean
+             python ./build_variant.py lemans.gpdsp0.prod --clean
+             python ./build_variant.py lemans.gpdsp1.prod --clean
 
        #. Build the image:
 
           ::
 
-             python ./build_variant.py lemans.cdsp0.prod && python ./build_variant.py lemans.cdsp1.prod
+             python ./build_variant.py lemans.adsp.prod && python ./build_variant.py lemans.cdsp0.prod && python ./build_variant.py lemans.cdsp1.prod && python ./build_variant.py lemans.gpdsp0.prod && python ./build_variant.py lemans.gpdsp1.prod
 
        .. rubric:: Build Boot
 
@@ -742,7 +745,7 @@ Build BSP image with extras
       # For example, for distributions like "Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|" and "Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|",
       # <PARTY_ID> is provided while signing up for distributions mapping to "Licensed developers (contact Qualcomm for access)".
       # To find <PARTY_ID>, sign in to your account at qualcomm.com.
-      # Click the profile icon, select Account Settings, and then scroll to Company Information section.
+      # Click the profile icon, select Account Settings, and then scroll down to the Company Information section.
       # Use the number specified for Export ID as <PARTY_ID>.
       export CUST_ID="213195"
 
@@ -779,10 +782,7 @@ Build BSP image with extras
           bitbake -fc cleansstate qcom-multimedia-image
           bitbake -fc cleanall qcom-multimedia-image
 
-   On a successful build, you can check if ``system.img`` is present in
-   the
-   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
-   directory:
+   After a successful build, you can verify if ``system.img`` is present in the ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image`` directory:
 
    ::
 
@@ -832,7 +832,7 @@ Build QIMP SDK image with extras
       # For example, for distributions like "Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|" and "Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|",
       # <PARTY_ID> is provided while signing up for distributions mapping to "Licensed developers (contact Qualcomm for access)".
       # To find <PARTY_ID>, sign in to your account at qualcomm.com.
-      # Click the profile icon, select Account Settings, and then scroll to Company Information section.
+      # Click the profile icon, select Account Settings, and then scroll down to the Company Information section.
       # Use the number specified for Export ID as <PARTY_ID>.
       export CUST_ID="213195"
 
@@ -875,10 +875,7 @@ Build QIMP SDK image with extras
          bitbake -fc cleansstate qcom-qim-product-sdk
          bitbake -fc cleanall qcom-qim-product-sdk
 
-   On a successful build, you can check if ``system.img`` is present in
-   the
-   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
-   directory:
+   After a successful build, you can check if ``system.img`` is present in the ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image`` directory:
 
    ::
 
@@ -937,7 +934,7 @@ Build QIRP SDK image with extras
       # For example, for distributions like "Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|" and "Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|",
       # <PARTY_ID> is provided while signing up for distributions mapping to "Licensed developers (contact Qualcomm for access)".
       # To find <PARTY_ID>, sign in to your account at qualcomm.com.
-      # Click the profile icon, select Account Settings, and then scroll to Company Information section.
+      # Click the profile icon, select Account Settings, and then scroll down to the Company Information section.
       # Use the number specified for Export ID as <PARTY_ID>.
       export CUST_ID="213195"
 
@@ -964,7 +961,7 @@ Build QIRP SDK image with extras
    .. note::
       To know the ``<machine>`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
 
-   On a successful build, you can see the QIRP SDK build artifacts at the following paths:
+   After a successful build, you can see the QIRP SDK build artifacts at the following paths:
 
    ::
 
