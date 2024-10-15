@@ -219,8 +219,7 @@ available at the ``/lib/firmware`` directory.
    - If the ``renesas_usb_fw.mem`` firmware is not available at the ``/lib/firmware`` directory, then :ref:`connect to UART <section_ags_ssh_p1c_vinayjk_03-01-24-1109-49-684>` and :ref:`enable the Wi-Fi <howto_setup_wifi_sub>`.
    - After getting the SSH and the IP address, :ref:`update USB and Ethernet controller firmware <section_nsb_5gs_5bc_vinayjk_06-21-24-1803-34-149>`.
 
-To check if USB to ETH controller is enumerated, run the following
-command:
+To check if the USB to ETH controller is enumerated, run the following command:
 
 ::
 

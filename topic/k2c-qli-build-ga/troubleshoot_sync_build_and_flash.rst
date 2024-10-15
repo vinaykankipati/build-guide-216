@@ -251,7 +251,7 @@ Sync
 
    If you see any junk characters while copying commands from the PDF,
    remove or replace the junk characters with appropriate symbols and
-   rerun the command. Alternately, you can open the guide in HTML mode
+   rerun the command. Alternatively, you can open the guide in HTML mode
    and use the copy command option.
 
    **Example**
@@ -395,8 +395,8 @@ Build
    following the subsequent instructions to dump verbose logs during fetch.
 
    By default, verbose logging is not enabled for Yocto git fetch. To
-   enable the same for all git projects, edit ``local.conf`` file and
-   change ``BB_GIT_VERBOSE_FETCH`` value to **1**. Verbose logging can
+   enable the same for all git projects, edit the ``local.conf`` file and
+   change the ``BB_GIT_VERBOSE_FETCH`` value to **1**. Verbose logging can
    also be enabled for each recipe. For example, to enable verbose
    logging and debug a ``do_fetch()`` failure in a diag recipe, perform
    the following steps:

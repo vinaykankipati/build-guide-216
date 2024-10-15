@@ -21,7 +21,7 @@ To sync and build real-time Linux, see :ref:`Build real-time Linux image <sectio
 
 .. _section_qct_b5g_s1c_vinayjk_03-12-24-127-51-384:
 
-Migrate from previous release to the next release
+Migrate from the previous release to the next release
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This depends on the development, branching, and integration workflows at
@@ -58,8 +58,7 @@ your end. However, the following steps must be performed:
 Build a Qualcomm Linux kernel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-See `building the
-kernel <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-3/yocto-kernel-support.html#build-kernel-image>`__.
+See `building kernel image <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-3/yocto-kernel-support.html#build-kernel-image>`__.
 
 .. _section_lb1_c5g_s1c_vinayjk_03-12-24-127-56-85:
 
@@ -90,7 +89,7 @@ Download layers for the QIMP SDK build using the manifest release tag
 
 .. _section_bgr_hfk_ybc_vinayjk_07-04-24-2242-31-273:
 
-Download layers for the QIRP SDK build by using manifest release tag
+Download layers for the QIRP SDK build by using the manifest release tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: 
@@ -110,7 +109,7 @@ Download layers for the QIRP SDK build by using manifest release tag
 
 .. _section_jpw_mfk_ybc_vinayjk_07-04-24-2244-2-775:
 
-Download layers for the real-time Linux build by using manifest release tag
+Download layers for the real-time Linux build by using the manifest release tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note:: For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
@@ -166,4 +165,3 @@ commands and already have an existing ``<WORKSPACE DIR>``, follow these steps to
       bitbake qcom-multimedia-image
       # Build SDK image
       bitbake qcom-qim-product-sdk
-

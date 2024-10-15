@@ -90,8 +90,8 @@ Set up the environment and generate eSDK:
       # Example
       bitbake -c do_populate_sdk_ext qcom-multimedia-image
 
-4. After building with standalone instructions and with new shell
-   (assuming build workspace exists):
+4. After building with standalone instructions and with a new shell
+   (assuming the build workspace exists):
 
    ::
 
@@ -106,7 +106,7 @@ Set up the environment and generate eSDK:
 
 5. After building with standalone instructions using Dockerfile.
 
-   a. Move the control to workspace directory:
+   a. Move the control to the workspace directory:
 
       ::
 
@@ -144,7 +144,7 @@ Rebuild the image and generate the eSDK again.
 
 .. _section_hjt_vhh_q1c_vinayjk_03-04-24-2335-32-213:
 
-Rebuild using Docker environment
+Rebuild using a Docker environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Run the commands to connect to Docker for your environment setup and then use the BitBake commands to rebuild:
@@ -213,7 +213,7 @@ Build a standalone QDL
 Change the Hexagon tool install path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``HEXAGON_ROOT`` environment variable must point to the path where the Hexagon tools are installed. By default, the ``qpm-cli`` tool installs ``HEXAGON_ROOT`` variable in ``$HOME`` directory. You can also choose an alternate installation directory.
+The ``HEXAGON_ROOT`` environment variable must point to the path where the Hexagon tools are installed. By default, the ``qpm-cli`` tool installs a ``HEXAGON_ROOT`` variable in the ``$HOME`` directory. You can also choose an alternate installation directory.
 
 Use the ``––path`` option in ``qpm-cli`` command to install Hexagon tools in a directory of your choice and export the ``HEXAGON_ROOT`` variable to the same directory.
 
@@ -277,7 +277,7 @@ Download the Platform eSDK
 
    #. Download the zipped file:
 
-      -  For a Ubuntu x86 architecture-based host machine:
+      -  For an Ubuntu x86 architecture-based host machine:
 
          ::
 

@@ -741,7 +741,7 @@ Build BSP image with extras
       export EXTRALAYERS="meta-qcom-extras"
 
       # CUST_ID is used to clone the proprietary source repositories downloaded by meta-qcom-extras.
-      # It enables source compilation for the corresponding binaries present in meta-qcom-hwe.
+      # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.
       # This ID is constant for the firmware repository qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git.
       # CUST_ID must be initialized to <PARTY_ID> for "Licensed developers (contact Qualcomm for access)".
       # For example, for distributions like "Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|" and "Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|",
@@ -828,7 +828,7 @@ Build QIMP SDK image with extras
       export EXTRALAYERS="meta-qcom-extras meta-qcom-qim-product-sdk"
 
       # CUST_ID is used to clone the proprietary source repositories downloaded by meta-qcom-extras.
-      # It enables source compilation for the corresponding binaries present in meta-qcom-hwe.
+      # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.
       # This ID is constant for the firmware repository qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git.
       # CUST_ID must be initialized to <PARTY_ID> for "Licensed developers (contact Qualcomm for access)".
       # For example, for distributions like "Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|" and "Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|",
@@ -930,7 +930,7 @@ Build QIRP SDK image with extras
       export EXTRALAYERS="meta-qcom-extras meta-qcom-robotics-extras"
 
       # CUST_ID is used to clone the proprietary source repositories downloaded by meta-qcom-extras.
-      # It enables source compilation for the corresponding binaries present in meta-qcom-hwe.
+      # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.
       # This ID is constant for the firmware repository qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git.
       # CUST_ID must be initialized to <PARTY_ID> for "Licensed developers (contact Qualcomm for access)".
       # For example, for distributions like "Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|" and "Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|",

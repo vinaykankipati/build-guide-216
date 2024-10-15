@@ -107,13 +107,13 @@ Build your own configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To build your own configuration, compile the build for default machine configuration and then compile the LE.QCLINUX.1.0.r1 image with your own MACHINE and QCOM_SELECTED_BSP parameter values.
 
-1. :ref:`Compile the build for default machine configuration <launcher_build_default_config>`.
+1. :ref:`Compile the build for the default machine configuration <launcher_build_default_config>`.
 
 2. Compile the `LE.QCLINUX.1.0.r1` image with your own MACHINE and QCOM_SELECTED_BSP parameter values.
    
    .. note:: For information on the supported machine configurations of the development kit, see the table *MACHINE and QCOM_SELECTED_BSP parameter value* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
-   a. To execute the build commands for a specific configuration, click **Compile using terminal**.
+   a. To run the build commands for a specific configuration, click **Compile using terminal**.
 
       .. image:: ../../media/k2c-qli-build-ga/compile_terminal_page.png
 
@@ -127,7 +127,7 @@ To build your own configuration, compile the build for default machine configura
 
       .. image:: ../../media/k2c-qli-build-ga/compile_terminal_new.png
 
-      For example, to build for Qualcomm® RB3 Gen 2 Core Development Kit, change the value of ``MACHINE`` in the above build command to ``qcs6490-rb3gen2-core-kit``.
+      For example, to build for Qualcomm® RB3 Gen 2 Core Development Kit, change the value of ``MACHINE`` in the preceding build command to ``qcs6490-rb3gen2-core-kit``.
    
    d. After a successful build, check that the ``system.img`` file is in the ``<Base Workspace Path>/DEV/LE.QCLINUX.1.0.r1/build-<DISTRO>/tmp-glibc/deploy/images/<MACHINE>/qcom-multimedia-image`` directory with an updated timestamp. For example:
 

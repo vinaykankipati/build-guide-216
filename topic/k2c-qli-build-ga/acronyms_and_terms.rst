@@ -22,9 +22,9 @@ QIMP            Qualcomm Intelligent Multimedia Product
 QIRF            Qualcomm Intelligent Robotics Function
 QIRP            Qualcomm Intelligent Robotics Product
 QLI             Qualcomm Linux
-QNN             Qualcomm neural network
+QNN             Qualcomm® Neural Network
 QPM             Qualcomm Package Manager
-QSC             Qualcomm software center
+QSC             Qualcomm Software Center
 QUD             Qualcomm USB drivers
 SDK             Software development kit
 TZ              TrustZone

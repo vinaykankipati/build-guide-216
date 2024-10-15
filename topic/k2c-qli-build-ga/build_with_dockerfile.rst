@@ -69,7 +69,7 @@ Create a Yocto Docker image and build:
    (**qcom-6.6.38-qli.1.2-ver.1.1_22.04**). This Docker image is used to
    create the container environment to run the Yocto build.
 
-   **Dockertag**: Use lowercase letters for the release folder followed by the Dockerfile OS version to easily identify the release build with the Dockerfile since Docker does not permit uppercase letters in the Dockertag.
+   **Dockertag**: Use lowercase letters for the release folder followed by the Dockerfile OS version to identify the release build with the Dockerfile since Docker does not permit uppercase letters in the Dockertag.
 
    .. note:: 
       To troubleshoot Docker issues, see :ref:`Docker troubleshooting <section_hkm_2dc_p1c_vinayjk_02-29-24-1641-18-155>`.
@@ -88,7 +88,7 @@ Create a Yocto Docker image and build:
          $ bash docker/docker_build.sh -n --no-cache -f ./docker/dockerfiles/Dockerfile_22.04 -t qcom-6.6.38-qli.1.2-ver.1.1_22.04
 
       # Error2: Response from daemon: Get "https://registry-1.docker.io/v2/": http: server gave HTTP response to HTTPS client
-         # Check with your IT administrator to acquire ``registry-mirrors`` URL and replace <my-docker-mirror-host>`` in the following solution 
+         # Check with your IT administrator to acquire ``registry-mirrors`` URL and replace <docker-mirror-host>`` in the following solution 
          # Using a tab instead of space and other invisible white-space characters may break the proper work of json configuration files
          # and later may lead to the Docker service failing to start
 
@@ -96,7 +96,7 @@ Create a Yocto Docker image and build:
            sudo vim /etc/docker/daemon.json
            # Add an entry similar to the following in /etc/docker/daemon.json:
            {
-              "registry-mirrors": ["https://<my-docker-mirror-host>"]
+              "registry-mirrors": ["https://<docker-mirror-host>"]
            }
            # Restart the Docker service to take the new settings
            sudo systemctl restart docker

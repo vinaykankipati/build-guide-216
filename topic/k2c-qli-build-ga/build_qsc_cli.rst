@@ -121,7 +121,7 @@ Build your own configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To build your own configuration, you must compile the build for default machine configuration and compile the LE.QCLINUX.1.0.r1 image with your own MACHINE and QCOM_SELECTED_BSP parameter values.
 
-1. Compile the build for default machine configuration:
+1. Compile the build for the default machine configuration:
 
    a. :ref:`Download the software <qsc_cli_software_download>`.
    
@@ -131,7 +131,7 @@ To build your own configuration, you must compile the build for default machine 
    
    .. note:: For information on the supported machine configurations of the development kit, see the table *MACHINE and QCOM_SELECTED_BSP parameter value* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
    
-   a. Execute the build commands for a specific configuration:
+   a. Run the build commands for a specific configuration:
 
       ::
 
@@ -141,13 +141,13 @@ To build your own configuration, you must compile the build for default machine 
 
       This command opens the terminal.
    
-      .. note:: An environment is setup to execute your own build commands for a given software image. QSC will not track the status of input workspaces in the future releases and flash using ``qsc-cli`` will not be supported for these workspaces.
+      .. note:: An environment is setup to run your own build commands for a specific software image. QSC will not track the status of input workspaces in the future releases and flash using ``qsc-cli`` will not be supported for these workspaces.
 
    b. Update the highlighted command according to your own machine configuration and run it on the terminal:
 
       .. image:: ../../media/k2c-qli-build-ga/compile_terminal_new.png
 
-      For example, to build for Qualcomm® RB3 Gen 2 Core Development Kit, change the value of ``MACHINE`` in the above build command to ``qcs6490-rb3gen2-core-kit``.
+      For example, to build for Qualcomm® RB3 Gen 2 Core Development Kit, change the value of ``MACHINE`` in the preceding build command to ``qcs6490-rb3gen2-core-kit``.
    
    c. After a successful build, check that the ``system.img`` file is in the ``<Base_Workspace_Path>/DEV/LE.QCLINUX.1.0.r1/build-<DISTRO>/tmp-glibc/deploy/images/<MACHINE>/qcom-multimedia-image`` directory with an updated timestamp. For example:
 

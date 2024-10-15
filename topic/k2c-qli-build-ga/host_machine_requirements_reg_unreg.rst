@@ -23,7 +23,7 @@ Host machine requirements
      - x86 machine
      - x86/Arm\ :sup:`®` machine
      - Git 1.8.3.1 or later versions
-     - :rspan:`4` A ``sudo`` permission is required to execute a few commands
+     - :rspan:`4` A ``sudo`` permission is required to run a few commands
 
    * - Quad-core CPU, for example, Intel i7-2600 at 3.4 GHz
        (equivalent or better)
@@ -45,12 +45,12 @@ Host machine requirements
       
 
    * - Ubuntu 22.04
-     - Microsoft Windows 11 OS
+     - Microsoft Windows 11
      - Apple\ :sup:`®` macOS\ :sup:`®` 14
      - GNU Make 4.0 or later versions
       
 
-.. note:: To set up a virtual machine (VM) running Ubuntu 22.04 OS on
+.. note:: To set up a virtual machine (VM) running Ubuntu 22.04 on
           Microsoft Windows or Apple Mac, see `Qualcomm Linux Virtual Machine
           Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-41/>`__.
           Code compilation on a VM is a slow process and may take a few hours.
