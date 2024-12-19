@@ -4,7 +4,7 @@ Host machine requirements
 ----------------------------
 
    .. flat-table::
-      :widths: 24 24
+      :widths: 24 24 24
       :header-rows: 1
       :class: longtable table-wrap
 
