@@ -10,7 +10,7 @@ GitHub workflow (firmware and extras)
 Use this information to build various Qualcomm Linux Yocto layers including the ``meta-qcom-hwe``, ``meta-qcom-extras``, ``meta-qcom-qim-product-sdk``,
 and ``meta-qcom-robotics-sdk`` layers using selective proprietary sources and binaries/libraries.
 
-.. include:: host_machine_requirements.rst
+.. include:: host_machine_requirements_reg_unreg.rst
 
 .. include:: install_qsc_cli.rst
 

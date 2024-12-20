@@ -188,36 +188,6 @@ Universal Flash Storage (UFS) provisioning helps to divide the storage into mult
     - This procedure is available for registered users only.
     - UFS is provisioned by default. If there are any changes in LUNs, UFS re-provisioning must be done again. To download the provision XML file and to check the applicability of UFS provisioning for different SoCs, see *UFS Provisioning* table in `Release Specific Information <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/ReleaseNote.html#release-specific-information>`__.
 
-<<<<<<< HEAD
-1. :ref:`Install QSC CLI <one_time_host_setup>`.
-#. Install PCAT and QUD on the host machine using qpm-cli:
-
-   ::
-
-      qpm-cli --login
-      qpm-cli --install quts --activate-default-license
-      qpm-cli --install qud --activate-default-license
-      qpm-cli --install pcat --activate-default-license
-
-   .. note::
-   
-      - The ``qpm-cli --help`` command lists the help options.
-      - For Ubuntu 22.04, you might encounter an issue when installing QUD. To ensure a successful installation, you may need to enroll the public key on your Linux host. For additional details, follow the steps outlined in the ``signReadme.txt`` file available at ``/opt/QTI/sign/``.
-
-#. Verify whether PCAT can detect the device in EDL mode:
-
-   ::
-
-      PCAT -DEVICES
-   
-   **Sample output**
-
-   ::
-
-      Searching devices in Device Manager, please wait for a moment…
-      ID | DEVICE TYPE | DEVICE STATE | SERIAL NUMBER | ADB SERIAL NUMBER | DESCRIPTION
-      NA | NA          | EDL          | BE116704      | be116704          | Qualcomm USB Composite Device:QUSB_BULK_CID:042F_SN:BE116704
-
 1. Download the provision file:
 
    Based on the required SoC, download the respective ‘provision’ from the "UFS Provisioning" table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/ReleaseNote.html#release-specific-information>`__.
@@ -335,13 +305,15 @@ Flash software using QDL
 
 #. Flash the images:
 
-      # Built images are under <workspace_path>/build-<DISTRO>/tmp-glibc/deploy/images/<MACHINE>/<IMAGE>
-      # build_path: For DISTRO=qcom-wayland, it is build-qcom-wayland. 
-      #             For DISTRO=qcom-robotics-ros2-humble, it is build-qcom-robotics-ros2-humble
-      # qdl <prog.mbn> [<program> <patch> ...]
-      # Example: build_path is build-qcom-wayland
-      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
-      <qdl_tool_path>/qdl_1.0.1/QDL_Linux_x64/qdl prog_firehose_ddr.elf rawprogram*.xml patch*.xml
+      ::
+
+         # Built images are under <workspace_path>/build-<DISTRO>/tmp-glibc/deploy/images/<MACHINE>/<IMAGE>
+         # build_path: For DISTRO=qcom-wayland, it is build-qcom-wayland. 
+         #             For DISTRO=qcom-robotics-ros2-humble, it is build-qcom-robotics-ros2-humble
+         # qdl <prog.mbn> [<program> <patch> ...]
+         # Example: build_path is build-qcom-wayland
+         cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
+         <qdl_tool_path>/qdl_1.0.1/QDL_Linux_x64/qdl prog_firehose_ddr.elf rawprogram*.xml patch*.xml
 
    .. note:: Use QDL binary based on the host machine architecture. For example, linux_x64 supported qdl binary is ``qdl_1.0.1/QDL_Linux_x64/qdl``.
 

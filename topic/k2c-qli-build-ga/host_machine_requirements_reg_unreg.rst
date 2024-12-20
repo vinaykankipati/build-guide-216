@@ -3,52 +3,32 @@
 Host machine requirements
 -------------------------------
 
-.. tabularcolumns:: |p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|
+.. tabularcolumns:: |p{3cm}|p{3cm}|p{3cm}|
 
 .. flat-table::
-   :header-rows: 2
+   :header-rows: 1
    :class: longtable table-wrap
 
-   * - :cspan:`2` Configuration
-      
-      
-     - :rspan:`1` Tools
-     - :rspan:`1` Permissions
-
-   * - **Linux**
-     - **Windows**
-     - **Mac**      
+   * - Configuration
+     - Tools
+     - Permissions 
 
    * - x86 machine
-     - x86 machine
-     - x86/Arm\ :sup:`®` machine
      - Git 1.8.3.1 or later versions
      - :rspan:`4` A ``sudo`` permission is required to run a few commands
 
    * - Quad-core CPU, for example, Intel i7-2600 at 3.4 GHz
        (equivalent or better)
-     - 8-core CPU
-     - 8-core CPU
-     - Tar 1.28 or later versions
-      
+     - Tar 1.28 or later versions      
 
    * - 300 GB free disk space (swap partition > 32 GB)
-     - 300 GB free space for the Windows Subsystem for Linux (WSL)
-     - 300 GB free space for UTM
-     - Python 3.10.2 or later versions
-      
+     - Python 3.10.2 or later versions      
 
    * - 16 GB RAM
-     - 8 GB RAM
-     - 8 GB RAM
-     - GCC 7.5 or later versions
-      
+     - GCC 7.5 or later versions      
 
    * - Ubuntu 22.04
-     - Microsoft Windows 11
-     - Apple\ :sup:`®` macOS\ :sup:`®` 14
-     - GNU Make 4.0 or later versions
-      
+     - GNU Make 4.0 or later versions      
 
 .. note:: To set up a virtual machine (VM) running Ubuntu 22.04 on
           Microsoft Windows or Apple Mac, see `Qualcomm Linux Virtual Machine

@@ -9,20 +9,20 @@ Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27>`__ be
 
 Users can do any of the following:
  
-- Download prebuilt images and flash
-- Sync, build software, and flash
+- Download prebuilt images and flash the software
+- Sync, build, and flash the software
 
-Download prebuilt images and flash
-----------------------------------------
+Download prebuilt images and flash the software
+------------------------------------------------
 
-- Download prebuilt flashable images (includes Platform eSDK) from the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/ReleaseNote.html#prebuilt-flashable-images-along-with-esdk>`__.
+- Download prebuilt flashable images (includes Platform eSDK) using the links in the *Artifactory links to prebuilt flashable images and eSDK* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/ReleaseNote.html#prebuilt-flashable-images-along-with-esdk>`__.
 
 - The Platform eSDK is an installer generated from the Qualcomm Linux software. It provides a complete Yocto environment that allows you to sync, modify, compile, and install applications and open-source plug-ins. For more information, see :ref:`Download the Platform eSDK <section_imr_xc4_1cc_vinayjk_07-12-24-1513-38-780>`.
 
 - To flash the prebuilt flashable images, see :doc:`Flash images <flash_images>`.
 
-Sync, build software, and flash
----------------------------------
+Sync, build, and flash the software
+-------------------------------------
 
 .. _section_rtp_vbg_qbc_vinayjk_06-05-24-1835-16-723:
 
