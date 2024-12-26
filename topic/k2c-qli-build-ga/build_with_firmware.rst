@@ -763,7 +763,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/.XF.5.29/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29/trustzone_images/build/ms/
                   python build_all.py -b TZ.XF.5.0 CHIPSET=lemans --cfg=build_config_deploy_lemans.xml
 
          .. rubric:: AOP firmware
@@ -789,7 +789,7 @@ Build firmware
       
                ::
 
-                  ./build_lemans.sh -c -l <FIRMWARE_ROOT>/llvm/14.0.4/
+                  ./build_lemansau.sh -c -l <FIRMWARE_ROOT>/llvm/14.0.4/
          
          #. Build the image:
 
@@ -797,7 +797,7 @@ Build firmware
       
                ::
 
-                  ./build_lemans.sh -l <FIRMWARE_ROOT>/llvm/14.0.4/
+                  ./build_lemansau.sh -l <FIRMWARE_ROOT>/llvm/14.0.4/
 
          .. rubric:: CPUCP firmware
 
@@ -890,7 +890,7 @@ Build firmware
                ::
 
                   export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux/sectools
-                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS8275.LE.1.0/common/sectoolsv2/ext/Linux               
+                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux               
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor:
 
