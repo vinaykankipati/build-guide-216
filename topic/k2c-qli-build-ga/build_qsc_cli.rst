@@ -96,9 +96,9 @@ For Ubuntu 22.04, you may encounter an issue while installing QUD, where you mig
       
       ::
 
-         qsc-cli flash --workspace-path <Base_Workspace_Path> --buildflavor "sa2150p_emmc" --serial <serial number>
+         qsc-cli flash --workspace-path <Base_Workspace_Path> --buildflavor "sa2150p_emmc" --serialnumber <serial number>
          
-         # Example, qsc-cli flash --workspace-path '/local/mnt/workspace/sample_workspace' --serial 'be116704'
+         # Example, qsc-cli flash --workspace-path '/local/mnt/workspace/sample_workspace' --serialnumber 'be116704'
       
    The ``--buildflavor`` argument is optional and only required for devices that have multiple flavors. To list the build flavors, run the following command on the host machine:
       

@@ -453,7 +453,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29.1/trustzone_images/build/ms/
                   vi build_config_deploy_kodiak.xml
                   # Edit all the occurrences of /pkg/qct/software/llvm/release/arm/16.0.7/ to <FIRMWARE_ROOT>/llvm/16.0.7/
 
@@ -471,7 +471,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29.1/trustzone_images/build/ms/
                   python build_all.py -b TZ.XF.5.0 CHIPSET=kodiak --cfg=build_config_deploy_kodiak.xml
 
          .. rubric:: AOP firmware
@@ -745,7 +745,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29.1/trustzone_images/build/ms/
                   vi build_config_deploy_lemans.xml
                   # Edit all the occurrences of /pkg/qct/software/llvm/release/arm/16.0.7/ to <FIRMWARE_ROOT>/llvm/16.0.7/
 
@@ -763,7 +763,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29.1/trustzone_images/build/ms/
                   python build_all.py -b TZ.XF.5.0 CHIPSET=lemans --cfg=build_config_deploy_lemans.xml
 
          .. rubric:: AOP firmware
@@ -1036,7 +1036,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29.1/trustzone_images/build/ms/
                   vi build_config_deploy_monaco.xml
                   # Edit all the occurrences of /pkg/qct/software/llvm/release/arm/16.0.7/ to <FIRMWARE_ROOT>/llvm/16.0.7/
 
@@ -1054,7 +1054,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/TZ.XF.5.29.1/trustzone_images/build/ms/
                   python build_all.py -b TZ.XF.5.0 CHIPSET=monaco --cfg=build_config_deploy_monaco.xml
 
          .. rubric:: AOP firmware
