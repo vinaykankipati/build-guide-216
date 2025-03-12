@@ -74,7 +74,7 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
 .. note:: Use UART only if the device has a preloaded build.
 
-1. :ref:`Connect the device to a UART shell <section_ags_ssh_p1c_vinayjk_03-01-24-1109-49-684>`.
+1. :ref:`Connect the device to a UART shell <connect_uart>`.
 
 2. Move the device to the EDL mode by running the following command on the UART shell:
 
@@ -254,8 +254,6 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
          .. note:: Dip switch S5-4 must be turned off after the flashing is complete.
 
-
-
 Provision UFS
 ---------------
 Universal Flash Storage (UFS) provisioning helps to divide the storage into multiple LUNS allowing different types of data to be stored separately. This improves access efficiency and system organization.
@@ -287,9 +285,18 @@ Universal Flash Storage (UFS) provisioning helps to divide the storage into mult
 
 #. Download the QDL tool.
 
-   QDL is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images.
+   Qualcomm Device Loader (QDL) is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images.
 
-   Download the latest version of the QDL tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
+   Acquire the latest version of the QDL tool using one of the following methods:
+   
+   - Download the tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
+   - Run the following command to download using CLI:
+     
+     .. container:: nohighlight
+      
+        ::
+     
+           wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/Latest.zip
 
    Run the following command to provide executable permission to QDL:
 
@@ -343,7 +350,16 @@ CDT provides platform/device-dependent data such as platform ID, subtype, versio
 
    QDL is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images.
 
-   Download the latest version of the QDL tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
+   Acquire the latest version of the QDL tool using one of the following methods:
+   
+   - Download the tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
+   - Run the following command to download using CLI:
+     
+     .. container:: nohighlight
+      
+        ::
+     
+           wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/Latest.zip
 
 #. Flash the CDT:
 
@@ -375,9 +391,18 @@ Flash software using QDL
   
 #. Download the QDL tool.
 
-   Qualcomm Device Loader (QDL) is a software tool that communicates with Qualcomm USB devices to upload a flash loader and flash software images.
+   QDL is a software tool that communicates with Qualcomm USB devices to upload a flash loader and flash software images.
 
-   Download the latest version of the QDL tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
+   Acquire the latest version of the QDL tool using one of the following methods:
+   
+   - Download the tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
+   - Run the following command to download using CLI:
+     
+     .. container:: nohighlight
+      
+      ::
+     
+        wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/Latest.zip
 
 #. Flash the images:
 
@@ -433,7 +458,8 @@ Flash software using PCAT
 ------------------------------------
 .. note:: This procedure is available for registered users only.
 
-1. :ref:`Install QSC CLI <one_time_host_setup>`.
+1. :ref:`Install QSC CLI <install_qsc_cli>`.
+ 
 #. To detect the connected devices and flash the software builds, ensure that the Qualcomm PCAT and QUD tools are installed on the host computer. Run the following commands to use ``qpm-cli`` to install PCAT and QUD:
 
    .. container:: nohighlight

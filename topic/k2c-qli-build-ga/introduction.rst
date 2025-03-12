@@ -2,7 +2,7 @@
 Introduction
 ========================================
 
-This guide describes how to configure, download, compile, and flash Qualcomm\ :sup:`®` Linux\ :sup:`®` and the associated firmware on supported devices.
+Configure, download, compile, and flash Qualcomm\ :sup:`®` Linux\ :sup:`®` and the associated firmware on supported devices.
 
 Qualcomm recommends that you read the `Qualcomm Linux Yocto
 Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27>`__ before starting your build.

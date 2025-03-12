@@ -28,7 +28,7 @@ The following table describes the Qualcomm Yocto layers and release tags:
    *  
      - ``meta-qcom-robotics-sdk``
      - manifest release tag
-     - qcom-6.6.52-QLI.1.3-Ver.1.1_robotics-product-sdk-1.1.xml
+     - qcom-6.6.65-QLI.1.4-Ver.1.0_robotics-product-sdk-1.0.xml
    * - Licensed developers with authorized access
      - ``meta-qcom-extras``
      - meta-qcom-extras release tag

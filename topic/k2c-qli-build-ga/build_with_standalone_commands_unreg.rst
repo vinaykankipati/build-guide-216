@@ -94,7 +94,7 @@ The following table shows an example mapping of the Yocto layers to the manifest
         - ``meta-qcom-realtime``
      - BSP build + Real-time kernel build:
        
-       ``qcom-6.6.52-QLI.1.3-Ver.1.1_realtime-linux-1.0.xml``
+       ``qcom-6.6.65-QLI.1.4-Ver.1.0_realtime-linux-1.0.xml``
      - ``qcom-wayland``
    * - 
         - ``meta-qcom``
@@ -107,7 +107,7 @@ The following table shows an example mapping of the Yocto layers to the manifest
         - ``meta-qcom-qim-product-sdk``
      - BSP build + QIRP SDK build:
        
-       ``qcom-6.6.52-QLI.1.3-Ver.1.1_robotics-product-sdk-1.1.xml``
+       ``qcom-6.6.65-QLI.1.4-Ver.1.0_robotics-product-sdk-1.0.xml``
      - ``qcom-robotics-ros2-humble``
 
 .. note::
@@ -373,7 +373,7 @@ For more details, see `Real-time kernel <https://docs.qualcomm.com/bundle/public
       ::
 
          git clone https://github.com/quic-yocto/meta-qcom-realtime -b <meta-qcom-realtime release tag> layers/meta-qcom-realtime
-         # Example, <meta-qcom-realtime release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1_realtime-linux-1.0
+         # Example, <meta-qcom-realtime release tag> is qcom-6.6.65-QLI.1.4-Ver.1.0_realtime-linux-1.0
 
    To build a real-time layer, the following export is required:
 

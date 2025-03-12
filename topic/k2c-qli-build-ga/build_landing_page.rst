@@ -5,37 +5,6 @@ Build Qualcomm Linux Software
 
   <link rel="stylesheet" type="text/css" href="https://d3je78mjrgbmx8.cloudfront.net/topic-card.css">
 
-  <style>
-
-    .topic-card .header-container>.sd-card-text img,
-    .topic-card .header-container>.sd-card-text svg {
-      background: #020B3F !important;
-    }
-
-    .topic-card .body-container .sd-card-text {
-      display: flex !important;
-      width: 100% !important;
-      align-items: center !important;
-      padding: 10px 0px !important;
-      border-bottom: 2px solid #CDD4DE !important;
-    }
-
-    .topic-card .body-container .sd-card-text>a {
-      font-family: "Roboto Flex";
-      width: 90% !important;
-      margin: 0px 5px !important;
-      font-size: 15px !important;
-      font-weight: 520 !important;
-    }
-
-    .topic-card .body-container .sd-card-text img,
-    .topic-card .body-container .sd-card-text svg {
-      width: 20px !important;
-      height: 20px !important;
-    }
-
-  </style>
-
 .. grid:: 2 2 3 3
   :gutter: 4
 

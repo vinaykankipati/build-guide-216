@@ -87,7 +87,7 @@ Download layers for the QIRP SDK build by using the manifest release tag
    mkdir <WORKSPACE_DIR>
    cd <WORKSPACE_DIR>
    repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-   # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1_robotics-product-sdk-1.1.xml
+   # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.0_robotics-product-sdk-1.0.xml
    repo sync
 
 .. note:: 
@@ -104,7 +104,7 @@ Download layers for the real-time Linux build by using the manifest release tag
    mkdir <WORKSPACE_DIR>
    cd <WORKSPACE_DIR>
    repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-   # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1_realtime-linux-1.0.xml
+   # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.0_realtime-linux-1.0.xml
    repo sync
 
 .. note:: 
