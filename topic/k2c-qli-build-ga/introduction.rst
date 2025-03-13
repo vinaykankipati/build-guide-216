@@ -2,8 +2,6 @@
 Introduction
 ========================================
 
-Configure, download, compile, and flash Qualcomm\ :sup:`®` Linux\ :sup:`®` and the associated firmware on supported devices.
-
 Qualcomm recommends that you read the `Qualcomm Linux Yocto
 Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27>`__ before starting your build.
 
@@ -27,7 +25,7 @@ Sync, build, and flash the software
 Unregistered users
 ^^^^^^^^^^^^^^^^^^^
 
-Unregistered users can sync and build Qualcomm Linux using the :doc:`Build with GitHub for unregistered users <github_workflow_unregistered_users>`. Qualcomm exclusively offers firmware components in the form of binary files to users who are not registered.
+Unregistered users can sync and build Qualcomm Linux using the :doc:`Build with GitHub for unregistered users <github_workflow_unregistered_users>`. Qualcomm exclusively offers firmware components in the form of binary files to users who aren't registered.
 
 Registered users
 ^^^^^^^^^^^^^^^^^

@@ -1,31 +1,30 @@
-Build Qualcomm Linux Software
+Software build documentation
 ==================================
+
+Configure, download, compile, and flash Qualcomm\ :sup:`®` Linux\ :sup:`®` and the associated firmware on supported devices.
+
+Introduction
+-------------
+
+.. grid:: 2 2 3 3
+    :gutter: 4
+    :class-container: get-started-cards
+
+    .. grid-item-card::  |icn-book-blue|  Build guide introduction
+        :class-card: card-base-line
+        :class-title: font-link
+        :class-body: font-gray-60
+        :link: flash_images
+        :link-type: ref
+
+        Provides overview on the various options to sync, build, and flash the software.
+
+Build Qualcomm Linux Software
+-------------------------------
 
 .. raw:: html
 
   <link rel="stylesheet" type="text/css" href="https://d3je78mjrgbmx8.cloudfront.net/topic-card.css">
-
-.. grid:: 2 2 3 3
-  :gutter: 4
-
-  .. grid-item-card::
-    :class-card: topic-card card-bg-fill
-
-    .. container:: header-container
-
-      |icn-sparkles|
-
-      .. container:: topic-container
-
-        |icn-book-blue| Topics
-
-        Featured topics
-
-    .. container:: body-container
-
-      |icn-book-blue| :ref:`Build with QSC Launcher <build_from_source_qsc_gui_intro>` |icn-arrow-right|
-
-      |icn-book-blue| :ref:`Flash software images <flash_images>` |icn-arrow-right|
 
 .. grid:: 2 2 3 3
     :gutter: 4
@@ -91,6 +90,38 @@ Flash Qualcomm Linux Software
         :link-type: ref
 
         Provides step-by-step instructions on how to flash the Qualcomm software on to the connected devices.
+
+Troubleshoot
+-------------
+
+.. grid:: 2 2 3 3
+    :gutter: 4
+    :class-container: get-started-cards
+
+    .. grid-item-card::  |icn-book-blue|  Troubleshoot issues
+        :class-card: card-base-line
+        :class-title: font-link
+        :class-body: font-gray-60
+        :link: flash_images
+        :link-type: ref
+
+        Provides steps to troubleshoot docker, sync, build, and flash issues.
+
+How to
+-------------
+
+.. grid:: 2 2 3 3
+    :gutter: 4
+    :class-container: get-started-cards
+
+    .. grid-item-card::  |icn-book-blue|  Troubleshoot issues
+        :class-card: card-base-line
+        :class-title: font-link
+        :class-body: font-gray-60
+        :link: flash_images
+        :link-type: ref
+
+        Get answers to FAQs on how to sync, build, set up the network, and set up the overall developer workflow.
 
 .. |icn-sparkles| image:: ../../media/k2c-qli-build-ga/icn-sparkles.svg
 
