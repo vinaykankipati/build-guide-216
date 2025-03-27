@@ -288,66 +288,41 @@ Download the Platform eSDK
 
 2. Set up the :ref:`Ubuntu host <ubuntu_host_setup_github_unreg>`.
 
-3. Download the Platform eSDK:
+3. Download the Platform eSDK.
 
-   a. Create a directory:
+   Based on the required SoC, download the respective eSDK from the *Artifactory links to pre-built flashable images and eSDK* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/ReleaseNote.html#prebuilt-flashable-images-along-with-esdk>`__.
 
-      .. container:: nohighlight
+   .. container:: nohighlight
       
-         ::
+      ::
 
-            mkdir <workspace_path>
+         mkdir <esdk_download_path>
+         cd <esdk_download_path>
+         wget <flashable_binaries_download_link>
+         unzip <downloaded_zip_file>
 
-   #. Open the directory:
+   Example:
 
-      .. container:: nohighlight
+   .. container:: nohighlight
       
-         ::
+      ::
 
-            cd <workspace_path>
+         mkdir <esdk_download_path>
+         cd <esdk_download_path>
+         wget https://artifacts.codelinaro.org/artifactory/qli-ci/flashable-binaries/qimpsdk/qcs6490-rb3gen2-core-kit/x86-qcom-6.6.65-QLI.1.4-Ver.1.0_qim-product-sdk-1.1.1.zip
+         unzip x86-qcom-6.6.65-QLI.1.4-Ver.1.0_qim-product-sdk-1.1.1.zip
 
-   #. Download the zipped file:
-
-      -  For an Ubuntu x86 architecture-based host computer:
-
-         .. container:: nohighlight
-      
-            ::
-
-               wget https://artifacts.codelinaro.org/artifactory/qli-ci/flashable-binaries/qimpsdk/qcs6490-rb3gen2-core-kit/x86/qcom-6.6.65-QLI.1.4-Ver.1.0_qim-product-sdk-1.1.1.zip
-
-      -  For an Arm\ :sup:`®` architecture-based host computer:
-
-         .. container:: nohighlight
-      
-            ::
-
-               wget https://artifacts.codelinaro.org/artifactory/qli-ci/flashable-binaries/qimpsdk/qcs6490-rb3gen2-core-kit/arm/qcom-6.6.65-QLI.1.4-Ver.1.0_qim-product-sdk-1.1.1.zip
-
-   #. Unzip the QIMP SDK to a directory of your choice:
-
-      .. container:: nohighlight
-      
-         ::
-
-            unzip qcom-6.6.65-QLI.1.4-Ver.1.0_qim-product-sdk-1.1.1.zip
-
-      After unzipping, you must see the eSDK installer at
-      ``<unzip_location>/target/qcm6490/sdk/``:
+      After unzipping, you must see the eSDK installer at ``<esdk_download_path>``:
       
       |imageunzipESDK|
 
-   #. If you don't have the necessary write permissions for the
-      directory where you are trying to install the eSDK, the installer
-      alerts you and then terminates. If this occurs, set up the
-      permissions in the directory appropriately by using the following
-      command and rerun the installer:
+   If you don't have the necessary write permissions for the directory where you are trying to install the eSDK, the installer alerts you and then terminates. If this occurs, set up the permissions in the directory appropriately by using the following command and rerun the installer:
 
-      .. container:: nohighlight
+   .. container:: nohighlight
       
-         ::
+      ::
 
-            umask a+rx
+         umask a+rx
 
 4. Run the installer script to install the eSDK. For example:
 

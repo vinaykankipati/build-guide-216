@@ -1158,19 +1158,17 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
 
          # CUST_ID is used to clone the proprietary source repositories downloaded by meta-qcom-extras.
          # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.
-         # This ID is constant for the firmware repository qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git.
-         # CUST_ID must be initialized to <PARTY_ID> for "Licensed developers (contact Qualcomm for access)".
-         # For example, for distributions like "Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|" and "Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|",
-         # <PARTY_ID> is provided while signing up for distributions mapping to "Licensed developers (contact Qualcomm for access)".
-         # To find <PARTY_ID>, log in to your account at qualcomm.com.
-         # Click the profile icon, select Account Settings, and then scroll down to the Company Information section.
-         # Use the number specified for Export ID as <PARTY_ID>.
+         # This ID is constant for the firmware repository for example "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git".
+         # CUST_ID must be initialized  for "Licensed developers (contact Qualcomm for access)".
+         # To find <CUST_ID>, log in to your account at qualcomm.com.
+         # Click the profile icon, select Account Settings, and then scroll down to the Company Information section for Customer ID.
+         # Use the number specified to export <CUST_ID>.
          export CUST_ID="213195"
 
          # The firmware recipe is compiled when the Yocto build is initiated. Firmware recipe expects the
          # path of firmware. You have generated firmware prebuilts (boot-critical and split-firmware binaries)
-         # using the steps described in the previous section. The directory path must contain QCM6490_bootbinaries.zip,
-         # QCM6490_dspso.zip, and QCM6490_fw.zip. 
+         # using the steps described in the previous section.
+         # Example, for QCM6490, the directory path must contain QCM6490_bootbinaries.zip, QCM6490_dspso.zip, and QCM6490_fw.zip. 
          # Set the environment variable to pick up the prebuilts:
          export FWZIP_PATH="<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/build/ufs/bin"
          # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/).
@@ -1256,19 +1254,17 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
 
          # CUST_ID is used to clone the proprietary source repositories downloaded by meta-qcom-extras.
          # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.
-         # This ID is constant for the firmware repository qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git.
-         # CUST_ID must be initialized to <PARTY_ID> for "Licensed developers (contact Qualcomm for access)".
-         # For example, for distributions like "Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|" and "Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|",
-         # <PARTY_ID> is provided while signing up for distributions mapping to "Licensed developers (contact Qualcomm for access)".
-         # To find <PARTY_ID>, log in to your account at qualcomm.com.
-         # Click the profile icon, select Account Settings, and then scroll down to the Company Information section.
-         # Use the number specified for Export ID as <PARTY_ID>.
+         # This ID is constant for the firmware repository for example "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git".
+         # CUST_ID must be initialized  for "Licensed developers (contact Qualcomm for access)".
+         # To find <CUST_ID>, log in to your account at qualcomm.com.
+         # Click the profile icon, select Account Settings, and then scroll down to the Company Information section for Customer ID.
+         # Use the number specified to export <CUST_ID>.
          export CUST_ID="213195"
 
          # The firmware recipe is compiled when the Yocto build is initiated. Firmware recipe expects the
          # path of firmware. You have generated firmware prebuilts (boot-critical and split-firmware binaries)
-         # using the steps described in the previous section. The directory path must contain QCM6490_bootbinaries.zip,
-         # QCM6490_dspso.zip, and QCM6490_fw.zip. 
+         # using the steps described in the previous section.
+         # Example, for QCM6490, the directory path must contain QCM6490_bootbinaries.zip, QCM6490_dspso.zip, and QCM6490_fw.zip.
          # Set the environment variable to pick up the prebuilts:
          export FWZIP_PATH="<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/build/ufs/bin"
          # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/).
@@ -1371,19 +1367,17 @@ For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle
 
          # CUST_ID is used to clone the proprietary source repositories downloaded by meta-qcom-extras.
          # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.
-         # This ID is constant for the firmware repository qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git.
-         # CUST_ID must be initialized to <PARTY_ID> for "Licensed developers (contact Qualcomm for access)".
-         # For example, for distributions like "Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|" and "Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|",
-         # <PARTY_ID> is provided while signing up for distributions mapping to "Licensed developers (contact Qualcomm for access)".
-         # To find <PARTY_ID>, log in to your account at qualcomm.com.
-         # Click the profile icon, select Account Settings, and then scroll down to the Company Information section.
-         # Use the number specified for Export ID as <PARTY_ID>.
+         # This ID is constant for the firmware repository for example "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git".
+         # CUST_ID must be initialized  for "Licensed developers (contact Qualcomm for access)".
+         # To find <CUST_ID>, log in to your account at qualcomm.com.
+         # Click the profile icon, select Account Settings, and then scroll down to the Company Information section for Customer ID.
+         # Use the number specified to export <CUST_ID>.
          export CUST_ID="213195"
 
          # The firmware recipe is compiled when the Yocto build is initiated. Firmware recipe expects the
          # path of firmware. You have generated firmware prebuilts (boot-critical and split-firmware binaries)
-         # using the steps described in the previous section. The directory path must contain QCM6490_bootbinaries.zip,
-         # QCM6490_dspso.zip, and QCM6490_fw.zip.
+         # using the steps described in the previous section.
+         # Example, for QCM6490, the directory path must contain QCM6490_bootbinaries.zip, QCM6490_dspso.zip, and QCM6490_fw.zip.
          # Set the environment variable to pick up the prebuilts:
          export FWZIP_PATH="<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk/<product>/common/build/ufs/bin"
          # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/).
