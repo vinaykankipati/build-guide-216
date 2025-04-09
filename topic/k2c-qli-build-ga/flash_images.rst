@@ -85,7 +85,7 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
          reboot edl
 
-3. Verify if the device has entered the Qualcomm Download (QDL) mode by running the following command on the host computer:
+3. Verify if the device has entered the Qualcomm Download mode (QDL mode) by running the following command on the host computer:
 
    .. container:: nohighlight
       
@@ -161,7 +161,7 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
          #. Connect the device to the host system using a Type-C cable through the USB Type-C connector.
          
-         #. Release the **F_DL** button. The device should now be in the Qualcomm download (QDL) mode. For this task, QDL is used interchangeably with EDL.
+         #. Release the **F_DL** button. The device should now be in the Qualcomm Download mode (QDL mode). For this task, QDL is used interchangeably with EDL.
          
          #. Verify whether the device has entered the QDL mode:
 
@@ -183,7 +183,7 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
          .. tabs:: 
 
-            .. group-tab:: Qualcomm® IQ-9 Beta Evaluation Kit
+            .. group-tab:: Qualcomm® IQ-9 Beta Evaluation Kit (EVK)
 
                1. Switch on the dip switch S5-4 to put the device in the EDL mode.
 
@@ -207,7 +207,7 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
                .. note:: Dip switch S5-4 must be turned off after the flashing is complete.
 
-            .. group-tab:: Qualcomm® Dragonwing™ IQ-9075 EVK
+            .. group-tab:: Qualcomm Dragonwing™ IQ-9075 EVK
 
                1. Switch on the dip switch S2-8 to put the device in the EDL mode.
 
@@ -323,45 +323,53 @@ Universal Flash Storage (UFS) provisioning helps to divide the storage into many
 
 Flash SAIL
 -----------
-.. note::
-   - SAIL is applicable only for QCS9075.
-   - Ensure that the device is in :ref:`EDL mode <move_to_EDL>`.
+.. note:: Safety Island (SAIL) is applicable only for QCS9075 and QCS8275.
 
-1. Download the QDL tool.
+.. container:: persistenttab-soc
 
-   QDL is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images.
+   .. tabs::
 
-   Acquire the latest version of the QDL tool using one of the following methods:
+      .. group-tab:: QCS9075
+         
+         1. Download the QDL tool.
+
+            QDL is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images.
+
+            Acquire the latest version of the QDL tool using one of the following methods:
    
-   - Download the tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
-   - Run the following command to download using CLI:
-     
-     .. container:: nohighlight
+            - Download the tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
+            - Run the following command to download using CLI:
+
+              .. container:: nohighlight
       
-        ::
+                 ::
      
-           wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/Latest.zip
+                    wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/Latest.zip
 
-#. Flash the SAIL.
+         #. Flash the SAIL.
 
-   .. container:: nohighlight
+            .. container:: nohighlight
       
-      ::
+               ::
 
-         # SAIL image is under <workspace_path>/build-<DISTRO>/tmp-glibc/deploy/images/<MACHINE>/<IMAGE>/sail_nor
-         # build_path: For DISTRO=qcom-wayland, it's build-qcom-wayland. 
-         #             For DISTRO=qcom-robotics-ros2-humble, it's build-qcom-robotics-ros2-humble
-         # qdl --storage spinor <prog.mbn> [<program> <patch> ...]
-         # Example: build_path is build-qcom-wayland
-         cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/sail_nor
-         <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl --storage spinor prog_firehose_ddr.elf rawprogram0.xml patch0.xml
+                  # SAIL image is under <workspace_path>/build-<DISTRO>/tmp-glibc/deploy/images/<MACHINE>/<IMAGE>/sail_nor
+                  # build_path: For DISTRO=qcom-wayland, it's build-qcom-wayland. 
+                  #             For DISTRO=qcom-robotics-ros2-humble, it's build-qcom-robotics-ros2-humble
+                  # qdl --storage spinor <prog.mbn> [<program> <patch> ...]
+                  # Example: build_path is build-qcom-wayland
+                  cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs9075-rb8-core-kit/qcom-multimedia-image/sail_nor
+                  <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl --storage spinor prog_firehose_ddr.elf rawprogram0.xml patch0.xml
 
+      .. group-tab:: QCS8275
+
+         .. note:: This procedure is available for registered users only.
+
+         For QCS8275 SAIL flashing steps, see Section 4.4 (Flash SAIL) from the `Qualcomm IQ-8 Beta Evaluation Kit Quick Start Guide <https://docs.qualcomm.com/bundle/80-70017-263/resource/80-70017-263_REV_AB_Qualcomm_IQ-8_Beta_Evaluation_KitQuick_Start_Guide.pdf>`__.
+         
 .. _flash_cdt:
 
 Flash CDT
 ----------
-.. note:: Ensure that the device is in :ref:`EDL mode <move_to_EDL>`.
-
 CDT provides platform/device-dependent data such as platform ID, subtype, version. Various Software (drivers/firmware) modules can use this information to perform dynamic detection and initialization of the platform. You can update CDT by flashing a CDT binary:
 
 1. Download the CDT binary.

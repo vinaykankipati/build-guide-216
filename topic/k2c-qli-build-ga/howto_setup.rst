@@ -22,13 +22,13 @@ Connect to a UART shell
 
          .. tabs:: 
 
-            .. group-tab:: Qualcomm® IQ-9 Beta Evaluation Kit
+            .. group-tab:: Qualcomm® IQ-9 Beta EVK
 
                To set up the debug UART connection and view the diagnostic messages, connect the debug-USB cable from the debug-USB port on the Qualcomm® IQ-9 Beta Evaluation Kit device to the Linux host.
 
                .. image:: ../../media/k2c-qli-build-ga/uart_ridesx.png
 
-            .. group-tab:: Qualcomm® Dragonwing™ IQ-9075 EVK
+            .. group-tab:: Dragonwing IQ-9075 EVK
 
                To set up the debug UART connection and view the diagnostic messages, connect the debug-USB cable from the debug-USB port on the Qualcomm® Dragonwing™ IQ-9075 EVK device to the Linux host.
 

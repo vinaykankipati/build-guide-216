@@ -18,7 +18,7 @@ EFI             Extensible firmware interface
 LE              Linux embedded
 LiteRT          Lite Runtime
 PCAT            Product configuration assistant tool
-QDL             Qualcomm download
+QDL             Qualcomm Device Loader
 QIMP            Qualcomm Intelligent Multimedia Product
 QIRF            Qualcomm Intelligent Robotics Function
 QIRP            Qualcomm Intelligent Robotics Product
@@ -28,6 +28,7 @@ QPM             Qualcomm Package Manager
 QSC             Qualcomm Software Center
 QTEE            Qualcomm Trusted Execution Environment
 QUD             Qualcomm USB drivers
+SAIL            Safety Island
 SDK             Software development kit
 WSL             Windows Subsystem for Linux
 =============== =======================================
