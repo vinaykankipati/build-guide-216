@@ -22,7 +22,7 @@ The Ubuntu host computer must be set up to install the required software tools a
          # Log in to qsc-cli to generate PAT
          qsc-cli login -u <username>
          # Run the following command to generate PAT
-         qsc-cli pat --get
+         qsc-cli show-access-token
          # This command gives output as shown in the following note
          # The last line in this output is the token, which can be used to access
          # Qualcomm Proprietary repositories. This token expires in two weeks.
@@ -31,7 +31,7 @@ The Ubuntu host computer must be set up to install the required software tools a
 
       .. container:: screenoutput
 
-         | user\@hostname:/local/mnt/workspace$ qsc-cli pat --get
+         | user\@hostname:/local/mnt/workspace$ qsc-cli show-access-token
          | [Info]: Starting qsc-cli version 0.0.0.9
          | **5LThNlklb55mMVLB5C2KqUGU2jCF**
 

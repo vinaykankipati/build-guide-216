@@ -40,6 +40,12 @@ Connect to a UART shell
 
          .. image:: ../../media/k2c-qli-build-ga/uart_ridesx.png
 
+      .. group-tab:: QCS615
+
+         To set up the debug UART connection and view the diagnostic messages, connect the debug-USB cable from the debug-USB port on the Qualcomm® IQ-6 Beta Evaluation Kit device to the Linux host.
+
+         .. image:: ../../media/k2c-qli-build-ga/uart_qcs615.png
+
 1. Install Minicom on the Linux host:
 
    .. container:: nohighlight

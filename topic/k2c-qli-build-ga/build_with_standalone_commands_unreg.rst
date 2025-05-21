@@ -200,6 +200,8 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
 
 Build QIMP SDK image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note:: This is not applicable for QCS615.
+
 The Qualcomm® Intelligent Multimedia Product (QIMP) SDK is a collection of four standalone function SDKs, namely, Qualcomm® Intelligent Multimedia SDK (IM SDK), Qualcomm® Neural Processing SDK, Qualcomm® AI Engine direct SDK, and Lite Runtime (LiteRT). It also includes reference applications that you can use to develop use cases. 
 
 For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-51>`__.
@@ -274,7 +276,8 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
 .. _build_qirp_sdk_image_unreg:
 
 Build QIRP SDK image
-^^^^^^^^^^^^^^^^^^^^^
+.. note:: This is not applicable for QCS615.
+
 The Qualcomm® Intelligent Robotics Product (QIRP) SDK 2.0 is a collection of components that enable you to develop robotic features on Qualcomm platforms.    This SDK is applicable to the Qualcomm Linux releases.
 
 For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-265>`__.

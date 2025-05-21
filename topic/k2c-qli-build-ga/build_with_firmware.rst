@@ -255,16 +255,16 @@ Build firmware
                   cd <FIRMWARE_ROOT>
                   mkdir llvm
 
-                  # Log in to qpm-cli and activate the license
-                  qpm-cli --login
-                  qpm-cli --license-activate sdllvm_arm
+                  # Log in to qsc-cli and activate the license
+                  qsc-cli --login
+                  qsc-cli tool activate-license sdllvm_arm
 
                   # LLVM requirement for boot compilation is 14.0.4
-                  qpm-cli --install sdllvm_arm --version 14.0.4 --path <FIRMWARE_ROOT>/llvm/14.0.4
+                  qsc-cli tool install sdllvm_arm --version 14.0.4 --path <FIRMWARE_ROOT>/llvm/14.0.4
                   chmod -R 777 <FIRMWARE_ROOT>/llvm/14.0.4
 
                   # LLVM requirement for Qualcomm TEE compilation is 16.0.7
-                  qpm-cli --install sdllvm_arm --version 16.0.7 --path <FIRMWARE_ROOT>/llvm/16.0.7
+                  qsc-cli tool install sdllvm_arm --version 16.0.7 --path <FIRMWARE_ROOT>/llvm/16.0.7
                   chmod -R 777 <FIRMWARE_ROOT>/llvm/16.0.7
 
          -  Export the ``SECTOOLS`` variable and compile the firmware builds (``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` is the top-level directory):
@@ -282,11 +282,11 @@ Build firmware
       
                ::
 
-                  qpm-cli --extract hexagon8.4 --version 8.4.07
+                  qsc-cli tool extract hexagon8.4 --version 8.4.07
                   export HEXAGON_ROOT=$HOME/Qualcomm/HEXAGON_Tools
                   echo $HEXAGON_ROOT
 
-            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qpm-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
+            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qsc-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
 
          .. rubric:: Build cDSP 
 
@@ -574,16 +574,16 @@ Build firmware
                   cd <FIRMWARE_ROOT>
                   mkdir llvm
 
-                  # Log in to qpm-cli and activate the license
-                  qpm-cli --login
-                  qpm-cli --license-activate sdllvm_arm
+                  # Log in to qsc-cli and activate the license
+                  qsc-cli --login
+                  qsc-cli tool activate-license sdllvm_arm
 
                   # LLVM requirement for boot compilation is 14.0.4
-                  qpm-cli --install sdllvm_arm --version 14.0.4 --path <FIRMWARE_ROOT>/llvm/14.0.4
+                  qsc-cli tool install sdllvm_arm --version 14.0.4 --path <FIRMWARE_ROOT>/llvm/14.0.4
                   chmod -R 777 <FIRMWARE_ROOT>/llvm/14.0.4
 
                   # LLVM requirement for Qualcomm TEE compilation is 16.0.7
-                  qpm-cli --install sdllvm_arm --version 16.0.7 --path <FIRMWARE_ROOT>/llvm/16.0.7
+                  qsc-cli tool install sdllvm_arm --version 16.0.7 --path <FIRMWARE_ROOT>/llvm/16.0.7
                   chmod -R 777 <FIRMWARE_ROOT>/llvm/16.0.7
 
          -  Export the ``SECTOOLS`` variable and compile the firmware builds (``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` is the top-level directory):
@@ -601,11 +601,11 @@ Build firmware
       
                ::
 
-                  qpm-cli --extract hexagon8.6 --version 8.6.05.2
+                  qsc-cli tool extract hexagon8.6 --version 8.6.05.2
                   export HEXAGON_ROOT=$HOME/Qualcomm/HEXAGON_Tools
                   echo $HEXAGON_ROOT
 
-            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qpm-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
+            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qsc-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
 
          .. rubric:: Build DSP      
 
@@ -868,16 +868,16 @@ Build firmware
                   cd <FIRMWARE_ROOT>
                   mkdir llvm
 
-                  # Log in to qpm-cli and activate the license
-                  qpm-cli --login
-                  qpm-cli --license-activate sdllvm_arm
+                  # Log in to qsc-cli and activate the license
+                  qsc-cli --login
+                  qsc-cli tool activate-license sdllvm_arm
 
                   # LLVM requirement for boot compilation is 14.0.4
-                  qpm-cli --install sdllvm_arm --version 14.0.4 --path <FIRMWARE_ROOT>/llvm/14.0.4
+                  qsc-cli tool install sdllvm_arm --version 14.0.4 --path <FIRMWARE_ROOT>/llvm/14.0.4
                   chmod -R 777 <FIRMWARE_ROOT>/llvm/14.0.4
 
                   # LLVM requirement for Qualcomm TEE compilation is 16.0.7
-                  qpm-cli --install sdllvm_arm --version 16.0.7 --path <FIRMWARE_ROOT>/llvm/16.0.7
+                  qsc-cli tool install sdllvm_arm --version 16.0.7 --path <FIRMWARE_ROOT>/llvm/16.0.7
                   chmod -R 777 <FIRMWARE_ROOT>/llvm/16.0.7
 
          -  Export the ``SECTOOLS`` variable and compile the firmware builds (``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` is the top-level directory):
@@ -895,12 +895,12 @@ Build firmware
       
                ::
 
-                  qpm-cli --extract hexagon8.6 --version 8.6.05.2
-                  qpm-cli --extract hexagon8.7 --version 8.7.02.1
+                  qsc-cli tool extract hexagon8.6 --version 8.6.05.2
+                  qsc-cli tool extract hexagon8.7 --version 8.7.02.1
                   export HEXAGON_ROOT=$HOME/Qualcomm/HEXAGON_Tools
                   echo $HEXAGON_ROOT
 
-            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qpm-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
+            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qsc-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
 
          .. rubric:: Build DSP      
 
@@ -1122,6 +1122,308 @@ Build firmware
             -  ``QCS8300_dspso.zip``
             -  ``QCS8300_fw.zip``
 
+      .. group-tab:: QCS615
+
+         .. rubric:: Prerequisites
+
+         -  Ensure that the working shell is ``bash``.
+
+            .. container:: nohighlight
+      
+               ::
+
+                  echo $0
+
+            The expected output of the command should be ``bash``. If not, enter the bash shell:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  bash
+
+         -  Install the libffi6 package using the following commands. This is required for the QAIC compiler, which generates the header and the source files from the IDL files:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  curl -LO http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi6_3.2.1-8_amd64.deb
+                  sudo dpkg -i libffi6_3.2.1-8_amd64.deb
+
+         -  Install LLVM for AOP, Qualcomm\ :sup:`®` Trusted Execution Environment (TEE), and boot compilation:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  cd <FIRMWARE_ROOT>
+                  mkdir llvm
+
+                  # Log in to qsc-cli and activate the license
+                  qsc-cli --login
+                  qsc-cli tool activate-license sdllvm_arm
+
+                  # LLVM requirement for boot compilation is 14.0.4
+                  qsc-cli tool install sdllvm_arm --version 14.0.4 --path <FIRMWARE_ROOT>/llvm/14.0.4
+                  chmod -R 777 <FIRMWARE_ROOT>/llvm/4.0.2
+
+                  # LLVM requirement for Qualcomm TEE compilation is 16.0.7
+                  qsc-cli tool install sdllvm_arm --version 16.0.7 --path <FIRMWARE_ROOT>/llvm/16.0.7
+                  chmod -R 777 <FIRMWARE_ROOT>/llvm/16.0.7
+
+                  # LLVM requirement for AOP is 3.9.3
+                  qsc-cli tool install sdllvm_arm --version 3.9.3 --path <FIRMWARE_ROOT>/llvm/3.9.3
+                  chmod -R 777 <FIRMWARE_ROOT>/llvm/3.9.3
+
+         -  Export the ``SECTOOLS`` variable and compile the firmware builds (``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` is the top-level directory):
+
+            .. container:: nohighlight
+      
+               ::
+
+                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS615.LE.1.0/common/sectoolsv2/ext/Linux/sectools
+                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS615.LE.1.0/common/sectoolsv2/ext/Linux
+
+         -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  qsc-cli tool extract hexagon8.2 --version 8.2.05.1
+                  export HEXAGON_ROOT=$HOME/Qualcomm/HEXAGON_Tools
+                  echo $HEXAGON_ROOT
+
+            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qsc-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
+
+         .. rubric:: Build cDSP 
+
+         **Tools required**
+
+         -  Compiler version: Hexagon 8.2.05
+         -  Python version: Python 2.7.18
+         -  libffi6 package 
+         
+         **Build steps**
+
+         1. Navigate to the following directory:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nomodem/CDSP.VT.2.2.c4
+
+         2. Clean the build:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  python cdsp_proc/build/build.py -c sm6150 -o clean -f CDSP
+
+         3. Build the image:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  python cdsp_proc/build/build.py -c sm6150 -o all -f CDSP
+
+         .. rubric:: Build aDSP
+
+         **Tools required**
+
+         -  Compiler version: Hexagon 8.2.05
+         -  Python version: Python 2.7.18
+         -  libffi6 package 
+         
+         **Build steps**
+
+         1. Navigate to the following directory:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nomodem/ADSP.VT.5.2.c6
+
+         2. Clean the build:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  python adsp_proc/build/build.py -c sm6150 -o clean -f ADSP
+
+         3. Build the image:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  python adsp_proc/build/build.py -c sm6150 -o all -f ADSP
+
+         .. rubric:: Build Boot
+
+         **Tools required**
+
+         -  Compiler version: LLVM version must be updated to 14.0.4
+
+            .. note:: 
+               To avoid build errors, ensure that there is a ``/`` at the end of the command.
+
+            .. container:: nohighlight
+      
+               ::
+
+                  export LLVM=<FIRMWARE_ROOT>/llvm/14.0.4/
+
+         -  Python version: Python 3.10
+    
+         **Build steps**
+
+         1. Install the device tree compiler:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  sudo apt-get install device-tree-compiler
+                  export DTC=/usr/bin
+
+         #. Navigate to the following directory:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/BOOT.MXF.1.0.c1/
+
+         #. Install the dependencies:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  python -m pip install -r boot_images/boot_tools/dtschema_tools/oss/requirements.txt
+                  pip install json-schema-for-humans
+
+         #. Clean the build:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  python -u boot_images/boot_tools/buildex.py -t talos,QcomToolsPkg -v LAA -r RELEASE --build_flags=cleanall
+
+         #. Build the image:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  python -u boot_images/boot_tools/buildex.py -t talos,QcomToolsPkg -v LAA -r RELEASE
+
+            .. note:: 
+               For debug variant builds, replace ``RELEASE`` with ``DEBUG``.
+
+         .. rubric:: Qualcomm TEE firmware
+
+         **Tools required**
+
+         -  Compiler version: LLVM 16.0.7
+         -  Python version: Python 3.10
+        
+         **Build steps**
+
+         1. Install LLVM:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nomodem/TZ.XF.5.29.1/trustzone_images/build/ms/
+                  vi build_config_deploy_talos.xml
+                  # Edit all the occurrences of /pkg/qct/software/llvm/release/arm/16.0.7/ to <FIRMWARE_ROOT>/llvm/16.0.7/
+
+         #. Clean the build:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  python build_all.py -b TZ.XF.5.0 CHIPSET=talos --cfg=build_config_deploy_talos.xml --clean
+
+         #. Build the image:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nomodem/TZ.XF.5.29.1/trustzone_images/build/ms/
+                  python build_all.py -b TZ.XF.5.0 CHIPSET=talos --cfg=build_config_deploy_talos.xml
+
+         .. rubric:: AOP firmware
+
+         **Tools required**
+
+         -  Compiler version: LLVM 3.9.3
+         -  Python version: Python 2.7.18 
+            
+         **Build steps**
+
+         1. Navigate to the following directory:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nomodem/AOP.HO.3.6.2/aop_proc/build/
+
+         #. Clean the build:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  ./build_TalosAU.sh -c -l <FIRMWARE_ROOT>/llvm/3.9.3/
+         
+         #. Build the image:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  ./build_TalosAU.sh -l <FIRMWARE_ROOT>/llvm/3.9.3/
+
+         .. rubric:: BTFM firmware
+
+         The BTFM firmware is released as a binary and build compilation isn't required.
+
+         .. rubric:: WLAN firmware
+
+         The WLAN firmware is released as a binary and build compilation isn't required.
+
+         .. rubric:: Generate firmware prebuilds (boot-critical and split-firmware binaries)
+
+         Create an integrated firmware binary from the individual components that you compiled:
+
+         .. container:: nohighlight
+      
+            ::
+
+               cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nomodem/QCS615.LE.1.0/common/build
+               python build.py --imf
+
+         .. note:: 
+            Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nomodem/QCS615.LE.1.0/common/build/common/bin`` directory:
+
+            -  ``QCS615_bootbinaries.zip``
+            -  ``QCS615_dspso.zip``
+            -  ``QCS615_fw.zip``
+
 Build BSP image with extras
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 BSP image build has the software components for Qualcomm device support and value-added software features applicable to Qualcomm SoCs. It includes a reference distribution configuration for Qualcomm development kits. The ``meta-qcom-extras`` layer enables source compilation of select components, which are otherwise present as binary.
@@ -1219,6 +1521,8 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
 
 Build QIMP SDK image with extras
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note:: This is not applicable for QCS615.
+
 The QIMP SDK is a collection of four standalone function SDKs, namely, Qualcomm IM SDK, Qualcomm Neural Processing SDK, Qualcomm AI Engine direct SDK, and LiteRT. It also includes reference applications that you can use to develop use cases. The ``meta-qcom-extras`` layer enables source compilation of select components, which are otherwise present as binary.
 
 For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-51>`__.
@@ -1322,6 +1626,8 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
 
 Build QIRP SDK image with extras
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note:: This is not applicable for QCS615.
+
 The QIRP SDK 2.0 is a collection of components that enable you to develop robotic features on Qualcomm Linux releases. The ``meta-qcom-extras`` layer enables source compilation of select components, which are otherwise available as binaries.
 
 For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-265>`__.

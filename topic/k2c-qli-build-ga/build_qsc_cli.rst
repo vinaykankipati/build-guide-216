@@ -14,8 +14,8 @@ Software download
 
       ::
 
-         qsc-cli download --workspace-path '<Base_Workspace_Path>' --product '<Product_ID>' --distribution '<Distribution>' --release '<Release_ID>'
-         # Example, qsc-cli download --workspace-path '/local/mnt/workspace/sample_workspace' --product 'QCM6490.LE.1.0' --distribution 'Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|NoModem' --release 'r00270.1'
+         qsc-cli chip-software download --workspace-path '<Base_Workspace_Path>' --product '<Product_ID>' --distribution '<Distribution>' --release '<Release_ID>'
+         # Example, qsc-cli chip-software download --workspace-path '/local/mnt/workspace/sample_workspace' --product 'QCM6490.LE.1.0' --distribution 'Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|NoModem' --release 'r00270.1'
 
    .. note::
       - If you are downloading more than one distribution, create a new workspace for each distribution that you download.
@@ -39,9 +39,9 @@ Start the compilation process after the download is complete:
    
    ::
 
-      qsc-cli compile --workspace-path '<Base_Workspace_Path>'
+      qsc-cli chip-software compile --workspace-path '<Base_Workspace_Path>'
       
-      # Example, qsc-cli compile --workspace-path '/local/mnt/workspace/sample_workspace'
+      # Example, qsc-cli chip-software compile --workspace-path '/local/mnt/workspace/sample_workspace'
 
 This process builds the necessary Qualcomm firmware and completes the Qualcomm Linux build.
 
@@ -56,27 +56,27 @@ To recompile after any modifications to the software release, use your existing 
    
    ::
 
-      qsc-cli compile --image '<Software_Image_Name>' --workspace-path '<Base_Workspace_Path>'
+      qsc-cli chip-software compile --image '<Software_Image_Name>' --workspace-path '<Base_Workspace_Path>'
       
-      # Example, qsc-cli compile --image LE.QCLINUX.1.0.r1 --workspace-path '/local/mnt/workspace/sample_workspace'
+      # Example, qsc-cli chip-software compile --image LE.QCLINUX.1.0.r1 --workspace-path '/local/mnt/workspace/sample_workspace'
 
 .. note:: For information on software image names (``--image``), see the table *QSC-CLI Input Parameters* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
 Flash
 '''''''''
 
-.. note:: For the QSC CLI to detect the connected devices and flash the software builds, install the Qualcomm Product Configuration Assistant Tool (PCAT) and Qualcomm USB Driver (QUD) on the host computer. Use the ``qpm-cli`` command to install PCAT and QUD:
+.. note:: For the QSC CLI to detect the connected devices and flash the software builds, install the Qualcomm Product Configuration Assistant Tool (PCAT) and Qualcomm USB Driver (QUD) on the host computer. Use the ``qsc-cli chip-software delete-workspace`` command to install PCAT and QUD:
 
    .. container:: nohighlight
       
       ::
 
-         qpm-cli --login
-         qpm-cli --install quts --activate-default-license
-         qpm-cli --install qud --activate-default-license
-         qpm-cli --install pcat --activate-default-license
+         qsc-cli --login
+         qsc-cli tool install --name quts --activate-default-license
+         qsc-cli tool install --name qud --activate-default-license
+         qsc-cli tool install --name pcat --activate-default-license
 
-The ``qpm-cli --help`` command lists the help options.
+The ``qsc-cli --help`` command lists the help options.
 
 For Ubuntu 22.04, you may see an issue while installing QUD, where you must enroll the public key on your Linux host for a successful QUD installation. For more information, see the ``signReadme.txt`` file in the ``/opt/QTI/sign/`` directory.
 
@@ -93,9 +93,9 @@ For Ubuntu 22.04, you may see an issue while installing QUD, where you must enro
       
       ::
 
-         qsc-cli flash --workspace-path <Base_Workspace_Path> --buildflavor "sa2150p_emmc" --serialnumber <serial number>
+         qsc-cli chip-software flash --workspace-path <Base_Workspace_Path> --buildflavor "sa2150p_emmc" --serialnumber <serial number>
          
-         # Example, qsc-cli flash --workspace-path '/local/mnt/workspace/sample_workspace' --serialnumber 'be116704'
+         # Example, qsc-cli chip-software flash --workspace-path '/local/mnt/workspace/sample_workspace' --serialnumber 'be116704'
       
    The ``--buildflavor`` argument is optional and only required for devices that have multiple flavors. To list the build flavors, run the following command on the host computer:
       
@@ -103,7 +103,7 @@ For Ubuntu 22.04, you may see an issue while installing QUD, where you must enro
       
       ::
 
-         qsc-cli flash --workspace-path <workspace path> --list-buildflavor
+         qsc-cli chip-software flash --workspace-path <workspace path> --list-buildflavor
 
    .. note::
       - To find the `<serial number>`, run the following command on the host computer:
@@ -148,8 +148,8 @@ To build your own configuration, you must compile the build for default machine 
          
          ::
 
-            qsc-cli open-build-env --workspace-path <Base_Workspace_Path> --image <Software_Image_Name>
-            # Example, qsc-cli open-build-env --workspace-path '/local/mnt/workspace/sample_workspace' --image 'LE.QCLINUX.1.0.r1' 
+            qsc-cli chip-software open-build-env --workspace-path <Base_Workspace_Path> --image <Software_Image_Name>
+            # Example, qsc-cli chip-software open-build-env --workspace-path '/local/mnt/workspace/sample_workspace' --image 'LE.QCLINUX.1.0.r1' 
 
       This command opens the terminal.
    

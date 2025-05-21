@@ -65,7 +65,7 @@ To see all the commands provided by QSC CLI, run the following commands:
    ::
 
       qsc-cli -h
-      qsc-cli download –h
+      qsc-cli chip-software download –h
 
 To see more details about a particular command, you can append ``-h`` to the command. For example:
 
@@ -73,7 +73,7 @@ To see more details about a particular command, you can append ``-h`` to the com
       
    ::
 
-      qsc-cli compile -h
+      qsc-cli chip-software compile -h
 
 Manage workspaces using QSC CLI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -84,7 +84,7 @@ List the workspaces using the following command:
       
    ::
 
-      qsc-cli workspace info --list
+      qsc-cli chip-software list-workspace
 
 To delete a workspace, run the following command:
 
@@ -92,9 +92,9 @@ To delete a workspace, run the following command:
       
    ::
 
-      qsc-cli workspace delete --workspace-path <workspace_path>
+      qsc-cli chip-software delete-workspace --workspace-path <workspace_path>
 
-      # Example, qsc-cli workspace delete --workspace-path '/local/mnt/worskspace/Qworkspace_QIMPSDK'
+      # Example, qsc-cli chip-software delete-workspace --workspace-path '/local/mnt/worskspace/Qworkspace_QIMPSDK'
 
 Find a Yocto workspace using QSC CLI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

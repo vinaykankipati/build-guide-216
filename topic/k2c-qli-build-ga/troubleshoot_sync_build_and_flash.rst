@@ -217,7 +217,7 @@ Sync
       
       ::
 
-         qsc-cli download --workspace-path '/local/mnt/workspace/<userid>/K2L/QSC_CLI_BUILD/build' --product 'QCM6490.LE.1.0' --release 'r00270.1' --distribution 'Qualcomm_Linux.SPF.1.0|TEST|DEVICE|PUBLIC'
+         qsc-cli chip-software download --workspace-path '/local/mnt/workspace/<userid>/K2L/QSC_CLI_BUILD/build' --product 'QCM6490.LE.1.0' --release 'r00270.1' --distribution 'Qualcomm_Linux.SPF.1.0|TEST|DEVICE|PUBLIC'
          [Info]: Starting qsc-cli version 0.0.0.7 
          (node:2924765) ExperimentalWarning: The Fetch API is an experimental feature. This feature could change at any time
          (Use `qsc-cli --trace-warnings ...` to show where the warning was created)
@@ -243,7 +243,7 @@ Sync
          # need the workspaces, you can delete this file using:
          mv /var/lib/qcom/data/qualcomm_launcher/workspaces2.json /var/lib/qcom/data/qualcomm_launcher/workspaces2.json.bak
          # Uninstall Qlauncher with the following command:
-         qpm-cli --uninstall qualcomm_launcher
+         qsc-cli tool uninstall qualcomm_launcher
 
 -  **docker: Error response from daemon: error while creating mount
    source path ‘/usr2/<userid>/.netrc’: mkdir /usr2/<userid>/.netrc:
@@ -348,7 +348,7 @@ Build
 -  **NOTE: No reply from server in 30s**
 
    If you are seeing this error during the build on the rerun of
-   ``qsc-cli compile`` or ``bitbake`` commands, you can try to delete
+   ``qsc-cli chip-software compile`` or ``bitbake`` commands, you can try to delete
    ``bitbake.lock``, ``bitbake.sock``, and ``hashserve.lock`` from your
    partially built workspace and retry the build. For example, if you
    are building with ``qsc-cli``, then these files are found under

@@ -18,7 +18,10 @@ Install QSC CLI
       ::
 
          cd <workspace_path>
-         curl -L https://softwarecenter.qualcomm.com/api/download/software/qsc/linux/latest.deb -o qsc_installer.deb
+         # For x86
+         curl -L https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Software_Center/Linux/Debian/latest.deb -o qsc_installer.deb
+         # For ARM64
+         curl -L https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Software_Center/Linux/ARM64/Debian/latest.deb -o qsc_installer.deb
 
 3. Install the ``qsc-cli`` Debian package:
 

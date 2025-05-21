@@ -255,14 +255,37 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
          .. note:: Dip switch S5-4 must be turned off after the flashing is complete.
 
+      .. group-tab:: QCS615
+
+         1. Switch on the dip switch S3-7 to put the device in the EDL mode.
+
+            .. image:: ../../media/k2c-qli-build-ga/qcs615_qdl_mode_manual.png
+
+         #. Verify whether the device has entered the QDL mode:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  lsusb
+
+            **Sample output**
+
+            .. container:: screenoutput
+
+               .. line-block::
+
+                   Bus 002 Device 014: ID 05c6:9008 Qualcomm, Inc. Gobi Wireless Modem (QDL mode)
+
+         .. note:: Dip switch S3-7 must be turned off after the flashing is complete.
+
 .. _provision_ufs:
 
 Provision UFS
 ---------------
 Universal Flash Storage (UFS) provisioning helps to divide the storage into many LUNs, which stores different types of data separately. This improves access efficiency and system organization.
 
-.. note::
-    - UFS is provisioned by default. If there are any changes in LUNs, UFS must be re-provisioned. To download the provision XML file and to check the applicability of UFS provisioning for different SoCs, see the table *UFS Provision* in `Release Specific Information <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/ReleaseNote.html#release-specific-information>`__.
+.. note:: UFS is provisioned by default. If there are any changes in LUNs, UFS must be re-provisioned. To download the provision XML file and to check the applicability of UFS provisioning for different SoCs, see the table *UFS Provision* in `Release Specific Information <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/ReleaseNote.html#release-specific-information>`__.
 
 1. Download the provision file.
 
@@ -418,7 +441,10 @@ CDT provides platform/device-dependent data such as platform ID, subtype, versio
       ::
 
          cd <cdt_download_path>
-         <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl prog_firehose_ddr.elf rawprogram3.xml patch3.xml
+         # For UFS storage
+         <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl --storage ufs prog_firehose_ddr.elf rawprogram3.xml patch3.xml
+         # For EMMC storage
+         <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl --storage emmc prog_firehose_ddr.elf rawprogram3.xml patch3.xml
 
    .. note:: Use QDL binary based on the host computer architecture. For example, linux_x64 supported qdl binary is ``qdl_<version>/QDL_Linux_x64/qdl``.
 
@@ -466,7 +492,10 @@ Flash software using QDL
          # qdl <prog.mbn> [<program> <patch> ...]
          # Example: build_path is build-qcom-wayland
          cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
-         <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl prog_firehose_ddr.elf rawprogram*.xml patch*.xml
+         # For UFS storage
+         <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl --storage ufs prog_firehose_ddr.elf rawprogram*.xml patch*.xml
+         # For EMMC storage
+         <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl --storage emmc prog_firehose_ddr.elf rawprogram*.xml patch*.xml
 
    .. note:: Use QDL binary based on the host computer architecture. For example, linux_x64 supported qdl binary is ``qdl_<version>/QDL_Linux_x64/qdl``.
 
@@ -510,16 +539,16 @@ Flash software using PCAT
 
 1. :ref:`Install QSC CLI <install_qsc_cli>`.
  
-#. To detect the connected devices and flash the software builds, install the Qualcomm PCAT and QUD tools on the host computer. Run the following commands to use ``qpm-cli`` to install PCAT and QUD:
+#. To detect the connected devices and flash the software builds, install the Qualcomm PCAT and QUD tools on the host computer. Run the following commands to use ``qsc-cli`` to install PCAT and QUD:
 
    .. container:: nohighlight
       
       ::
 
-         qpm-cli --login
-         qpm-cli --install quts --activate-default-license
-         qpm-cli --install qud --activate-default-license
-         qpm-cli --install pcat --activate-default-license
+         qsc-cli --login
+         qsc-cli tool install --name quts --activate-default-license
+         qsc-cli tool install --name qud --activate-default-license
+         qsc-cli tool install --name pcat --activate-default-license
 
    .. note:: For Ubuntu 22.04, you may see an issue while installing QUD, where you must enroll the public key on your Linux host for a successful QUD installation. For more details, follow the steps provided in the README file available in the ``/opt/QTI/sign/signReadme.txt`` directory.
 
@@ -576,8 +605,10 @@ Flash software using PCAT
    .. container:: nohighlight
       
       ::
-         
+         # For UFS storage
          PCAT –PLUGIN SD -DEVICE <device_serial_number> -BUILD “<build_images_path>” -MEMORYTYPE UFS -FLAVOR asic
+         # For EMMC storage
+         PCAT –PLUGIN SD -DEVICE <device_serial_number> -BUILD “<build_images_path>” -MEMORYTYPE EMMC -FLAVOR asic
 
          # Example, PCAT -PLUGIN SD -DEVICE be116704 -BUILD "<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image" -MEMORYTYPE UFS -FLAVOR asic
 

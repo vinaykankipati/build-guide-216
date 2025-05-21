@@ -28,7 +28,7 @@ The Ubuntu host computer must be set up to install the required software tools a
          # Log in to qsc-cli to generate PAT
          qsc-cli login -u <username>
          # Run the following command to generate PAT
-         qsc-cli pat --get
+         qsc-cli show-access-token
          # This command gives output as shown in the following note
          # The last line in this output is the token, which can be used to access
          # Qualcomm Proprietary repositories. This token expires in two weeks.
@@ -38,7 +38,7 @@ The Ubuntu host computer must be set up to install the required software tools a
         
       .. container:: screenoutput
 
-         | user\@hostname:/local/mnt/workspace$ qsc-cli pat --get
+         | user\@hostname:/local/mnt/workspace$ qsc-cli show-access-token
          | [Info]: Starting qsc-cli version 0.0.0.9
          | **5LThNlklb55mMVLB5C2KqUGU2jCF**
 
@@ -214,6 +214,8 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
 
 Build QIMP SDK image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note:: This is not applicable for QCS615.
+
 The QIMP SDK is a collection of four standalone function SDKs, namely, IM SDK, Qualcomm Neural Processing SDK, Qualcomm AI Engine direct SDK, and LiteRT. It also includes reference applications that you can use to develop use cases. 
 
 For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-51>`__.
@@ -286,6 +288,8 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
 
 Build QIRP SDK image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. note:: This is not applicable for QCS615.
+
 The Qualcomm® Intelligent Robotics Product (QIRP) SDK 2.0 is a collection of components that enable you to develop robotic features on Qualcomm Linux releases.
 
 For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-265>`__.

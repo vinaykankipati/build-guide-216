@@ -15,18 +15,18 @@ Software download
 
       **Or**
 
-      Install PCAT and QUD using ``qpm-cli``:
+      Install PCAT and QUD using ``qsc-cli``:
 
       .. container:: nohighlight
          
          ::
 
-            qpm-cli --login
-            qpm-cli --install quts --activate-default-license
-            qpm-cli --install qud --activate-default-license
-            qpm-cli --install pcat --activate-default-license
+            qsc-cli --login
+            qsc-cli tool install --name quts --activate-default-license
+            qsc-cli tool install --name qud --activate-default-license
+            qsc-cli tool install --name pcat --activate-default-license
 
-      The ``qpm-cli --help`` command lists the help options.
+      The ``qsc-cli --help`` command lists the help options.
 
       For Ubuntu 22.04, you may see an issue while installing QUD where you must enroll the public key on your Linux host for a successful QUD installation. For more details, follow the steps provided in the ``signReadme.txt`` file available at the ``/opt/QTI/sign/`` directory.
 

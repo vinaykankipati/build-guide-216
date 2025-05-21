@@ -61,4 +61,3 @@ Registered users can use any one of the following three methods to sync and buil
 .. note::
   
    - See `hardware SoCs <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-115/soc.html>`__ that are supported on Qualcomm Linux.
-   - For QCS615 build instructions, see `QCS615.LE.1.0 Software User Guide <https://docs.qualcomm.com/bundle/resource/topics/80-70018-75/introduction_1.html>`__.

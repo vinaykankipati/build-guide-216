@@ -238,11 +238,11 @@ Build a standalone QDL
 Change the Hexagon tool install path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ``HEXAGON_ROOT`` environment variable must point to the path where the Hexagon tools are installed. By default, the ``qpm-cli`` tool installs a ``HEXAGON_ROOT`` variable in the ``$HOME`` directory. You can also choose an alternate installation directory.
+The ``HEXAGON_ROOT`` environment variable must point to the path where the Hexagon tools are installed. By default, the ``qsc-cli`` tool installs a ``HEXAGON_ROOT`` variable in the ``$HOME`` directory. You can also choose an alternate installation directory.
 
-Use the ``––path`` option in ``qpm-cli`` command to install Hexagon tools in a directory of your choice and export the ``HEXAGON_ROOT`` variable to the same directory.
+Use the ``––path`` option in ``qsc-cli`` command to install Hexagon tools in a directory of your choice and export the ``HEXAGON_ROOT`` variable to the same directory.
 
-Provide an absolute path for ``<TOOLS_DIR>`` in ``qpm-cli`` and export commands as shown in the following example:
+Provide an absolute path for ``<TOOLS_DIR>`` in ``qsc-cli`` and export commands as shown in the following example:
 
 .. container:: nohighlight
       
@@ -251,7 +251,7 @@ Provide an absolute path for ``<TOOLS_DIR>`` in ``qpm-cli`` and export commands 
       # Example
       
       mkdir -p <TOOLS_DIR>
-      qpm-cli --extract hexagon8.4 --version 8.4.07 --path <TOOLS_DIR>/8.4.07
+      qsc-cli tool extract hexagon8.4 --version 8.4.07 --path <TOOLS_DIR>/8.4.07
       export HEXAGON_ROOT=<TOOLS_DIR>
 
 .. _image_recipes_github_workflow:
