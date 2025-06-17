@@ -16,7 +16,7 @@ Connect to a UART shell
          
          To set up the debug UART connection and view the diagnostic messages, connect the micro-USB cable from the micro-USB port on the RB3 Gen 2 device to the Linux host.
 
-         .. image:: ../../media/k2c-qli-build-ga/micro_usb_port.jpg
+         .. image:: ../../media/k2c-qli-build-ga/micro_usb_port.png
 
       .. group-tab:: IQ-9075
 

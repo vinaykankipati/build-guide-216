@@ -20,23 +20,23 @@ The following table describes the Qualcomm Yocto layers and release tags:
    * - :rspan:`2` Public developers (unregistered)
      - ``meta-qcom-hwe``
      - manifest release tag
-     - qcom-6.6.65-QLI.1.4-Ver.1.1.xml
+     - qcom-6.6.90-QLI.1.5-Ver.1.0.xml
    *  
      - ``meta-qcom-qim-product-sdk``
      - manifest release tag
-     - qcom-6.6.65-QLI.1.4-Ver.1.1_qim-product-sdk-1.1.2.xml
+     - qcom-6.6.90-QLI.1.5-Ver.1.0_qim-product-sdk-2.0.0.xml
    *  
      - ``meta-qcom-robotics-sdk``
      - manifest release tag
-     - qcom-6.6.65-QLI.1.4-Ver.1.0_robotics-product-sdk-1.0.xml
+     - qcom-6.6.90-QLI.1.5-Ver.1.0_robotics-product-sdk-1.0.xml
    * - Licensed developers with authorized access
      - ``meta-qcom-extras``
      - meta-qcom-extras release tag
-     - r1.0_00077.0 
+     - r1.0_00091.0 
    * - See :ref:`Mapping access levels to firmware distributions <build_mapping_access_levels>`
      - NA
      - firmware release tag
-     - r1.0_00075.0
+     - r1.0_00092.0
 
 The following tables describe the firmware distributions you can download according to the need and entitlements:
 
@@ -204,7 +204,7 @@ The following ``git clone`` command downloads the selected firmware components i
       mkdir -p <FIRMWARE_ROOT>
       cd <FIRMWARE_ROOT>
       git clone -b <firmware release tag> --depth 1 https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk.git
-      # Example, <firmware release tag> is r1.0_00075.0
+      # Example, <firmware release tag> is r1.0_00092.0
 
 .. note:: 
    - The ``git clone`` command clones the content into the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` directory.
@@ -1138,10 +1138,10 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
          repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-         # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.1.xml
+         # Example, <manifest release tag> is qcom-6.6.90-QLI.1.5-Ver.1.0.xml
          repo sync
          git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1
-         # Example, <meta-qcom-extras release tag> is r1.0_00077.0
+         # Example, <meta-qcom-extras release tag> is r1.0_00091.0
          mkdir -p layers/meta-qcom-extras
          cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
          # An example <product> is QCM6490.LE.1.0. For more information about <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/).
@@ -1234,14 +1234,14 @@ For more details, see `Qualcomm IM SDK Quick Start Guide <https://docs.qualcomm.
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
          repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-         # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.1.xml
+         # Example, <manifest release tag> is qcom-6.6.90-QLI.1.5-Ver.1.0.xml
          repo sync
          git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1
          # Example, <meta-qcom-extras release tag> is r1.0_0005.0
          mkdir -p layers/meta-qcom-extras
          cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
          # An example <product> is QCM6490.LE.1.0. For more information about <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/).
-         git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.65-QLI.1.4-Ver.1.1_qim-product-sdk-1.1.2 layers/meta-qcom-qim-product-sdk
+         git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.90-QLI.1.5-Ver.1.0_qim-product-sdk-2.0.0 layers/meta-qcom-qim-product-sdk
 
    .. note:: For the ``<manifest release tag>`` and ``<meta-qcom-extras release tag>`` information, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
@@ -1339,10 +1339,10 @@ For more details, see `QIR SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
          repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-         # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.1.xml
+         # Example, <manifest release tag> is qcom-6.6.90-QLI.1.5-Ver.1.0.xml
          repo sync
          git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1
-         # Example, <meta-qcom-extras release tag> is r1.0_00077.0
+         # Example, <meta-qcom-extras release tag> is r1.0_00091.0
          mkdir -p layers/meta-qcom-extras
          mkdir -p layers/meta-qcom-robotics-extras
          cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
@@ -1350,11 +1350,11 @@ For more details, see `QIR SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/
          # An example <product> is QCM6490.LE.1.0. For more information about <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/).
 
          git clone https://github.com/ros/meta-ros -b scarthgap layers/meta-ros && cd layers/meta-ros && git checkout c560699e810e60a9526f4226c2c23f8d877280c8 && cd ../../
-         git clone https://github.com/quic-yocto/meta-qcom-robotics.git -b qcom-6.6.65-QLI.1.4-Ver.1.0_robotics-product-sdk-1.0 layers/meta-qcom-robotics
-         git clone https://github.com/quic-yocto/meta-qcom-robotics-distro.git -b qcom-6.6.65-QLI.1.4-Ver.1.0_robotics-product-sdk-1.0 layers/meta-qcom-robotics-distro
-         git clone https://github.com/quic-yocto/meta-qcom-robotics-sdk.git -b qcom-6.6.65-QLI.1.4-Ver.1.0_robotics-product-sdk-1.0 layers/meta-qcom-robotics-sdk
-         git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.65-QLI.1.4-Ver.1.1_qim-product-sdk-1.1.2 layers/meta-qcom-qim-product-sdk
-         # Example, <meta-qcom-qim-product-sdk release tag> is qcom-6.6.65-QLI.1.4-Ver.1.1_qim-product-sdk-1.1.2
+         git clone https://github.com/quic-yocto/meta-qcom-robotics.git -b qcom-6.6.90-QLI.1.5-Ver.1.0_robotics-product-sdk-1.0 layers/meta-qcom-robotics
+         git clone https://github.com/quic-yocto/meta-qcom-robotics-distro.git -b qcom-6.6.90-QLI.1.5-Ver.1.0_robotics-product-sdk-1.0 layers/meta-qcom-robotics-distro
+         git clone https://github.com/quic-yocto/meta-qcom-robotics-sdk.git -b qcom-6.6.90-QLI.1.5-Ver.1.0_robotics-product-sdk-1.0 layers/meta-qcom-robotics-sdk
+         git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.90-QLI.1.5-Ver.1.0_qim-product-sdk-2.0.0 layers/meta-qcom-qim-product-sdk
+         # Example, <meta-qcom-qim-product-sdk release tag> is qcom-6.6.90-QLI.1.5-Ver.1.0_qim-product-sdk-2.0.0
 
    .. note:: 
        For the ``<manifest release tag>``, ``<meta-qcom-extras release tag>``, and ``<meta-qcom-qim-product-sdk release tag>`` information, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.

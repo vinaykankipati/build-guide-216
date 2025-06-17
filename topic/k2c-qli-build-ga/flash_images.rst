@@ -157,7 +157,7 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
          1. Press and hold the **F_DL** button.
 
-            .. image:: ../../media/k2c-qli-build-ga/RB3Gen2_device.jpg
+            .. image:: ../../media/k2c-qli-build-ga/RB3Gen2_device.png
 
          #. Connect the device to a +12 V wall power supply.
 

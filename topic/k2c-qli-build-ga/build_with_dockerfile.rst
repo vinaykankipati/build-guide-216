@@ -119,8 +119,8 @@ Create a Yocto Docker image and build:
       
       ::
 
-         bash docker/docker_run.sh -t qcom-6.6.65-qli.1.4-ver.1.1_22.04 -r qcom-6.6.65-QLI.1.4-Ver.1.1 -M <machine> --build-override <override> --alternate-repo true
-         # Example, bash docker/docker_run.sh -t qcom-6.6.65-qli.1.4-ver.1.1_22.04 -r qcom-6.6.65-QLI.1.4-Ver.1.1 -M qcs6490-rb3gen2-vision-kit --build-override custom --alternate-repo true 
+         bash docker/docker_run.sh -t qcom-6.6.65-qli.1.4-ver.1.1_22.04 -r qcom-6.6.90-QLI.1.5-Ver.1.0 -M <machine> --build-override <override> --alternate-repo true
+         # Example, bash docker/docker_run.sh -t qcom-6.6.65-qli.1.4-ver.1.1_22.04 -r qcom-6.6.90-QLI.1.5-Ver.1.0 -M qcs6490-rb3gen2-vision-kit --build-override custom --alternate-repo true 
 
    .. note::
       For various ``<machine>`` and ``<override>`` combinations, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
@@ -128,7 +128,7 @@ Create a Yocto Docker image and build:
    The build workspace is available in
    ``<qcom-download-utils download path>/<release>/build-qcom-wayland``.
    For example,
-   ``qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.1/build-qcom-wayland``.
+   ``qcom-download-utils/qcom-6.6.90-QLI.1.5-Ver.1.0/build-qcom-wayland``.
 
 .. note:: 
    - **# ERROR: error.GitError: git config (‘–replace-all’,‘color.ui’, ‘auto’): error: couldn't write config file /home/$USER/.gitconfig: Device or resource busy**
@@ -150,7 +150,7 @@ Build Qualcomm IM SDK image
          ::
 
             # Run the following commands inside the base image build location
-            cd <workspace_path>/qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.1
+            cd <workspace_path>/qcom-download-utils/qcom-6.6.90-QLI.1.5-Ver.1.0
             bash
             docker run -it -v "${HOME}/.gitconfig":"/home/${USER}/.gitconfig" -v "${HOME}/.netrc":"/home/${USER}/.netrc" -v $(pwd):$(pwd) -w $(pwd) qcom-6.6.65-qli.1.4-ver.1.1_22.04 /bin/bash
 
@@ -161,7 +161,7 @@ Build Qualcomm IM SDK image
          ::
 
             git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b <meta-qcom-qim-product-sdk release tag> layers/meta-qcom-qim-product-sdk
-            # Example, <meta-qcom-qim-product-sdk release tag> is qcom-6.6.65-QLI.1.4-Ver.1.1_qim-product-sdk-1.1.2
+            # Example, <meta-qcom-qim-product-sdk release tag> is qcom-6.6.90-QLI.1.5-Ver.1.0_qim-product-sdk-2.0.0
 
       Build the Qualcomm IM SDK layer:
 
@@ -224,14 +224,14 @@ To rebuild after any modifications to the software release, use your existing wo
       ::
 
          # Run the following commands outside the Docker container
-         cd <workspace_path>/qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.1
+         cd <workspace_path>/qcom-download-utils/qcom-6.6.90-QLI.1.5-Ver.1.0
 
          # Run the following commands inside the base image build location
          bash
          docker run -it -v "${HOME}/.gitconfig":"/home/${USER}/.gitconfig" -v "${HOME}/.netrc":"/home/${USER}/.netrc" -v $(pwd):$(pwd) -w $(pwd) qcom-6.6.65-qli.1.4-ver.1.1_22.04 /bin/bash
 
          # Example
-         WORKSPACE=<workspace_path>/qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.1
+         WORKSPACE=<workspace_path>/qcom-download-utils/qcom-6.6.90-QLI.1.5-Ver.1.0
 
 #. Set up the build environment:
 
