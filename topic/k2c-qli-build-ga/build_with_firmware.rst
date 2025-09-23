@@ -281,6 +281,7 @@ Build firmware
                ::
 
                   qsc-cli tool extract --name hexagon8.4 --required-version 8.4.07
+                  qsc-cli tool extract --name hexagon8.4 --required-version 8.4.10
                   export HEXAGON_ROOT=$HOME/Qualcomm/HEXAGON_Tools
                   echo $HEXAGON_ROOT
 
@@ -494,6 +495,52 @@ Build firmware
                ::
 
                   ./build_kodiak.sh -l <FIRMWARE_ROOT>/llvm/14.0.4/
+
+         .. rubric:: Build MPSS
+
+         .. note:: This build is applicable only for ``Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|`` and ``Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|QIMPSDK``.
+
+         **Tools required**
+
+         -  Compiler version: Hexagon 8.4.10
+         -  Python version: Python 3.8.2
+         
+         **Build steps**
+
+         1. Nanopb integration (one-time setup):
+
+            .. container:: nohighlight
+      
+               ::
+
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_amss_standard_oem_qimpsdk/MPSS.HI.4.3.3.c6.2/modem_proc/ssc_api
+		            curl https://jpa.kapsi.fi/nanopb/download/nanopb-0.3.9.5-linux-x86.tar.gz -o nanopb-0.3.9.5-linux-x86.tar.gz
+		            cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_amss_standard_oem_qimpsdk/MPSS.HI.4.3.3.c6.2/modem_proc
+		            python ssc_api/build/config_nanopb_dependency.py -f  nanopb-0.3.9.5-linux-x86
+         
+         #. Go to the following directory:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_amss_standard_oem_qimpsdk/MPSS.HI.4.3.3.c6.2/modem_proc/build/ms
+
+         #. Clean the build:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  python build_variant.py kodiak.gen.prod --clean
+
+         #. Build the image:
+
+            .. container:: nohighlight
+      
+               ::
+
+                  python build_variant.py kodiak.gen.prod bparams=-k
 
          .. rubric:: CPUCP firmware
 
