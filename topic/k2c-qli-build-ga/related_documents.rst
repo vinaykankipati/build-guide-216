@@ -21,8 +21,8 @@ Related documents
    * - `Qualcomm Linux Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250926012339/>`__
      - RNO-250926012339
 
-   * - `Qualcomm Dragonwing™ IQ-615 Beta Evaluation Kit quickstart <https://docs.qualcomm.com/bundle/80-70022-293/resource/80-70020-293_REV_AA_Qualcomm_Dragonwing_IQ-615_Beta_Evaluation_Kit_Quick_Start_Guide.pdf>`__
-     - 80-70022-293   
+   * - `Qualcomm Dragonwing™ IQ-615 Beta Evaluation Kit quickstart <https://docs.qualcomm.com/bundle/80-70020-293/resource/80-70020-293_REV_AA_Qualcomm_Dragonwing_IQ-615_Beta_Evaluation_Kit_Quick_Start_Guide.pdf>`__
+     - 80-70020-293   
 
    * - `Qualcomm Linux Kernel Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70022-3>`__
      - 80-70022-3
