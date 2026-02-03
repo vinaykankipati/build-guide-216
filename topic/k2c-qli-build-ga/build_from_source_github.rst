@@ -200,6 +200,9 @@ The BSP image build has software components for the Qualcomm device support and 
          cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
          ls -al system.img
 
+.. note::
+   For repo manifest based builds, refer to :ref:`Alternate Build Instructions via Manifest <howto_build>`
+
 Flash
 ^^^^^^^
 

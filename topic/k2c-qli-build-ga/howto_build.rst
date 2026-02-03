@@ -3,6 +3,59 @@
 Build
 -------
 
+Alternative Build Instrucions via Manifest
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Repo is a tool which can be used to download a list of git repositories from a `manifest <https://github.com/qualcomm-linux/qcom-manifest/>`__. Repo can be used
+for syncing the Yocto meta layers needed for the build.
+
+1. Install these packages in addition to the base system requirements to perform a repo-manifest based build 
+
+   .. container:: nohighlight
+      
+      ::
+
+         sudo apt install repo python3-yaml
+
+#. Download Qualcomm Yocto and supporting layer
+
+   .. container:: nohighlight
+      
+      ::
+
+         # cd to directory where you have 300 GB of free storage space to create your workspaces
+         mkdir <workspace-dir>
+         cd <workspace-dir>
+
+         # Example, <manifest-release-tag> is qcom-6.6.200-QLI.2.0-Ver.1.0.xml
+         repo init -u https://github.com/qualcomm-linux/qcom-manifest -m <manifest-release-tag>.xml
+
+         repo sync
+
+#. Set up the Yocto build environment:
+
+  .. container:: nohighlight
+    
+    ::
+
+        # setup-environment provides a help section for instructions
+        # Run the script with --help to view all supported flags
+        setup-environment --help
+
+        # machine and distro flags refer to machine and distro configuration files present in `meta-qcom/ci` directory.
+        # setup-environment: Sets the environment settings, creates the build directory build,
+        # and enters into build directory.
+        source setup-environment --machine meta-qcom/ci/qcs9100-ride-sx.yml --distro meta-qcom/ci/qcom-distro.yml
+
+#. Build the software image:
+
+  .. container:: nohighlight
+    
+    ::
+
+        # Build required image using bitbake `bitbake qcom-multimedia-image` 
+        bitbake <image-recipe>
+
 Check if the build is complete
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
