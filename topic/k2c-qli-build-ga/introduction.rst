@@ -35,15 +35,12 @@ Sync, build, and flash the software
      :align: center
      :class: longtable
   
-     * - Launcher
-       - CLI
-       - GitHub
-     * - GUI-based Qualcomm\ :sup:`®` Software Center (QSC) Launcher.
-       - QSC command-line interface (CLI).
-       - A GitHub-based workflow.
-     * - .. centered:: :doc:`Build with QSC Launcher <build_from_source_qsc_gui_intro>` 
-       - .. centered:: :doc:`Build with QSC CLI <build_frm_source_qsc_cli>`
-       - .. centered:: :doc:`Build with GitHub for registered users <build_from_source_github_intro>`
+     * - CLI
+       - Docker
+     * - QSC command-line interface (CLI).
+       - A Docker-based workflow.
+     * - .. centered:: :doc:`Build with QSC CLI <build_frm_source_qsc_cli>`
+       - .. centered:: :doc:`Build from Source with Docker <build_from_source_github_intro>`
 
 .. only:: html
    

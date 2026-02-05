@@ -30,14 +30,6 @@ Build Qualcomm Linux Software
     :gutter: 4
     :class-container: get-started-cards
 
-    .. grid-item-card::  |icn-book-blue|  Build with QSC Launcher
-        :class-card: card-base-line
-        :class-title: font-link
-        :class-body: font-gray-60
-        :link: build_from_source_qsc_gui_intro
-        :link-type: ref
-
-        The Qualcomm® Software Center (QSC) launcher is a GUI-based desktop application where you can download, compile, and flash the Qualcomm Linux software builds through a GUI.
 
     .. grid-item-card::  |icn-book-blue|  Build with QSC CLI
         :class-card: card-base-line
