@@ -216,44 +216,6 @@ When the eSDK generation is complete, you can see the images in the following di
 
 Rebuild the image and generate the eSDK again.
 
-Rebuild using a Docker environment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-1. Run the commands to connect to Docker for your environment setup and then use the BitBake commands to rebuild:
-
-   .. container:: nohighlight
-      
-      ::
-
-         cd <workspace_path>/DEV/<softwareimage>
-         # Example, cd /local/mnt/workspace/Qworkspace/DEV/LE.QCLINUX.1.0.r1 for making changes to Yocto layers
-         # Make code changes
-
-#. Get to a Docker shell as mentioned in :ref:`Generate an eSDK <how_to_build_generate_sdk>`.
-
-#. Rebuild using your source changes:
-
-   .. container:: nohighlight
-      
-      ::
-
-         # Rebuild commands
-         MACHINE=<machine> DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         # Example, MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         bitbake qcom-multimedia-image
-
-   To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/doc/80-70023-300/>`__.
-
-#. Build image ``qcom-multimedia-test-image``:
-
-   .. container:: nohighlight
-      
-      ::
-
-         MACHINE=<machine> DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         # Example, MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         bitbake qcom-multimedia-test-image
-
 Build a standalone QDL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
