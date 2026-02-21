@@ -177,8 +177,8 @@ Build firmware
       
                ::
 
-                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux/sectools
-                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux
+                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.2.0/common/sectoolsv2/ext/Linux/sectools
+                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.2.0/common/sectoolsv2/ext/Linux
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor. Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qsc-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
 
@@ -472,10 +472,10 @@ Build firmware
       
               ::
 
-                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.1.0/common/build
+                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.2.0/common/build
                 python build.py --imf
 
-         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.1.0/common/build/ufs/bin`` directory:
+         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.2.0/common/build/ufs/bin`` directory:
 
             -  ``QCM6490_bootbinaries.zip``
             -  ``QCM6490_dspso.zip``
@@ -537,8 +537,8 @@ Build firmware
       
                ::
 
-                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.1.0/common/sectoolsv2/ext/Linux/sectools
-                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.1.0/common/sectoolsv2/ext/Linux
+                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.2.0/common/sectoolsv2/ext/Linux/sectools
+                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.2.0/common/sectoolsv2/ext/Linux
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor. Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qsc-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
 
@@ -764,10 +764,10 @@ Build firmware
       
               ::
 
-                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.1.0/common/build
+                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.2.0/common/build
                 python build.py --imf
 
-         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.1.0/common/build/ufs/bin`` directory:
+         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.2.0/common/build/ufs/bin`` directory:
 
             -  ``QCS9100_bootbinaries.zip``
             -  ``QCS9100_dspso.zip``
@@ -829,8 +829,8 @@ Build firmware
       
                ::
 
-                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux/sectools
-                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux               
+                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.2.0/common/sectoolsv2/ext/Linux/sectools
+                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.2.0/common/sectoolsv2/ext/Linux               
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor. Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qsc-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
             .. container:: nohighlight
@@ -1052,10 +1052,10 @@ Build firmware
          
               ::
 
-                 cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.1.0/common/build
+                 cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.2.0/common/build
                  python build.py --imf
 
-         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.1.0/common/build/ufs/bin`` directory:
+         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.2.0/common/build/ufs/bin`` directory:
                         
            -  ``QCS8300_bootbinaries.zip``
            -  ``QCS8300_dspso.zip``
@@ -1101,7 +1101,7 @@ The BSP image build has software components for the Qualcomm device support and 
          # Example, for QCM6490, the directory path must contain QCM6490_bootbinaries.zip, QCM6490_dspso.zip, and QCM6490_fw.zip. 
          # Set the environment variable to pick up the prebuilts:
          export FWZIP_PATH="<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/<product>/common/build/ufs/bin"
-         # An example <product> is QCM6490.LE.1.0. For more information about <product>, see the latest Release Notes (https://docs.qualcomm.com/doc/80-80020-300/).
+         # An example <product> is QCM6490.LE.2.0. For more information about <product>, see the latest Release Notes (https://docs.qualcomm.com/doc/80-80020-300/).
 
          # Populate meta-qcom-extras kas fragment
          meta-qcom-extras/setup_extras_config.sh 
