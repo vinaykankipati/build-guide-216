@@ -47,7 +47,7 @@ The following tables describe the firmware distributions that you can download. 
    * - Licensed developers with authorized access
      - BSP build: High-level OS and firmware source (GPS only)
        
-       ``Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|NoModem``
+       ``Qualcomm_Linux.SPF.2.0|AP|Standard|OEM|NoModem``
      - 
        ``meta-qcom``
 
@@ -57,7 +57,7 @@ The following tables describe the firmware distributions that you can download. 
    * - :rspan:`2` Licensed developers (contact Qualcomm for access)
      - BSP build: High-level OS and firmware (GPS only) source
        
-       ``Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|``
+       ``Qualcomm_Linux.SPF.2.0|AP|Standard|OEM|``
      - 
        ``meta-qcom``
 
@@ -67,7 +67,7 @@ The following tables describe the firmware distributions that you can download. 
    *  
      - BSP build: High-level OS and firmware (GPS and modem) source
       
-        ``Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|``
+        ``Qualcomm_Linux.SPF.2.0|AMSS|Standard|OEM|``
      - ``meta-qcom``
 
        ``meta-qcom-distro``
@@ -87,15 +87,15 @@ The following table maps the firmware distributions to git repositories:
      - Git command
      - Directory into which firmware gets synced on git clone
 
-   * - Qualcomm_Linux.SPF.1.0|AP|Standard|OEM|NoModem
+   * - Qualcomm_Linux.SPF.2.0|AP|Standard|OEM|NoModem
      - ``git clone -b <firmware release tag> --depth 1 https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem.git``
      - ``qualcomm-linux-spf-2-0_ap_standard_oem_nomodem``
 
-   * - Qualcomm_Linux.SPF.1.0|AP|Standard|OEM\|
+   * - Qualcomm_Linux.SPF.2.0|AP|Standard|OEM\|
      - ``git clone -b <firmware release tag> --depth 1 https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-2-0_ap_standard_oem.git``
      - ``qualcomm-linux-spf-2-0_ap_standard_oem``
 
-   * - Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM\|
+   * - Qualcomm_Linux.SPF.2.0|AMSS|Standard|OEM\|
      - ``git clone -b <firmware release tag> --depth 1 https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-2-0_amss_standard_oem.git``
      - ``qualcomm-linux-spf-2-0_amss_standard_oem``
 
@@ -404,7 +404,7 @@ Build firmware
 
          .. rubric:: Build MPSS
 
-         .. note:: This build is applicable only for ``Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|``.
+         .. note:: This build is applicable only for ``Qualcomm_Linux.SPF.2.0|AMSS|Standard|OEM|``.
 
          **Tools required**
 
