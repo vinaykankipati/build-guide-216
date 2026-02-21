@@ -4,7 +4,7 @@ Build with firmware sources
 Sync firmware
 ^^^^^^^^^^^^^^
 
-Commands in the following sections are based on the binary and source for firmware images without modem and GPS (see the command in :ref:`Mapping firmware distributions to git repositories <Mapping_firmware_table>`). Hence, ``qualcomm-linux-spf-2-0_ap_standard_oem_nm`` is used. If you use any other distribution, then update the directory accordingly.
+Commands in the following sections are based on the binary and source for firmware images without modem and GPS (see the command in :ref:`Mapping firmware distributions to git repositories <Mapping_firmware_table>`). Hence, ``qualcomm-linux-spf-2-0_ap_standard_oem_nomodem`` is used. If you use any other distribution, then update the directory accordingly.
 
 The following table describes the Qualcomm Yocto layers and release tags:
 
@@ -109,7 +109,7 @@ The following ``git clone`` command downloads the selected firmware components i
 
       mkdir -p <FIRMWARE_ROOT>
       cd <FIRMWARE_ROOT>
-      git clone -b <firmware release tag> --depth 1 https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-2-0_ap_standard_oem_nm.git
+      git clone -b <firmware release tag> --depth 1 https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem.git
       # Example, <firmware release tag> is r1.0_00114.0
 
 The ``git clone`` command clones the content into the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm`` directory. For the latest ``<firmware release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/doc/80-80020-300/>`__.
@@ -171,14 +171,14 @@ Build firmware
                   qsc-cli tool install --name sdllvm_arm --required-version 16.0.7 --path <FIRMWARE_ROOT>/llvm/16.0.7
                   chmod -R 777 <FIRMWARE_ROOT>/llvm/16.0.7
 
-         -  Export the ``SECTOOLS`` variable and compile the firmware builds (``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm`` is the top-level directory):
+         -  Export the ``SECTOOLS`` variable and compile the firmware builds (``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem`` is the top-level directory):
 
             .. container:: nohighlight
       
                ::
 
-                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux/sectools
-                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux
+                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux/sectools
+                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor. Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qsc-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
 
@@ -207,7 +207,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/CDSP.HT.2.5.c3/cdsp_proc/build/ms
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/CDSP.HT.2.5.c3/cdsp_proc/build/ms
 
          2. Clean the build:
 
@@ -241,9 +241,9 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/ADSP.HT.5.5.c8/adsp_proc/qsh_api
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/ADSP.HT.5.5.c8/adsp_proc/qsh_api
                   curl https://jpa.kapsi.fi/nanopb/download/nanopb-0.3.9.5-linux-x86.tar.gz -o nanopb-0.3.9.5-linux-x86.tar.gz
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/ADSP.HT.5.5.c8/adsp_proc/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/ADSP.HT.5.5.c8/adsp_proc/
                   python qsh_api/build/config_nanopb_dependency.py -f nanopb-0.3.9.5-linux-x86
          
          #. Go to the following directory:
@@ -252,7 +252,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/ADSP.HT.5.5.c8/adsp_proc/build/ms
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/ADSP.HT.5.5.c8/adsp_proc/build/ms
 
          #. Clean the build:
 
@@ -303,7 +303,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/BOOT.MXF.1.0.c1/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/BOOT.MXF.1.0.c1/
 
          #. Install the dependencies:
 
@@ -348,7 +348,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/TZ.XF.5.29.1/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/TZ.XF.5.29.1/trustzone_images/build/ms/
                   vi build_config_deploy_kodiak.xml
                   # Edit all the occurrences of /pkg/qct/software/llvm/release/arm/16.0.7/ to <FIRMWARE_ROOT>/llvm/16.0.7/
 
@@ -366,7 +366,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/TZ.XF.5.29.1/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/TZ.XF.5.29.1/trustzone_images/build/ms/
                   python build_all.py -b TZ.XF.5.0 CHIPSET=kodiak --cfg=build_config_deploy_kodiak.xml
 
          .. rubric:: Build AOP firmware
@@ -384,7 +384,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/AOP.HO.3.6/aop_proc/build/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/AOP.HO.3.6/aop_proc/build/
 
          #. Clean the build:
 
@@ -472,10 +472,10 @@ Build firmware
       
               ::
 
-                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCM6490.LE.1.0/common/build
+                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.1.0/common/build
                 python build.py --imf
 
-         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCM6490.LE.1.0/common/build/ufs/bin`` directory:
+         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCM6490.LE.1.0/common/build/ufs/bin`` directory:
 
             -  ``QCM6490_bootbinaries.zip``
             -  ``QCM6490_dspso.zip``
@@ -531,14 +531,14 @@ Build firmware
                   qsc-cli tool install --name sdllvm_arm --required-version 16.0.7 --path <FIRMWARE_ROOT>/llvm/16.0.7
                   chmod -R 777 <FIRMWARE_ROOT>/llvm/16.0.7
 
-         -  Export the ``SECTOOLS`` variable and compile the firmware builds (``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm`` is the top-level directory):
+         -  Export the ``SECTOOLS`` variable and compile the firmware builds (``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem`` is the top-level directory):
 
             .. container:: nohighlight
       
                ::
 
-                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCS9100.LE.1.0/common/sectoolsv2/ext/Linux/sectools
-                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCS9100.LE.1.0/common/sectoolsv2/ext/Linux
+                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.1.0/common/sectoolsv2/ext/Linux/sectools
+                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.1.0/common/sectoolsv2/ext/Linux
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor. Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qsc-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
 
@@ -584,7 +584,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/DSP.AT.1.0.1/dsp_proc/build/ms
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/DSP.AT.1.0.1/dsp_proc/build/ms
 
          #. Clean the build:
 
@@ -639,7 +639,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/BOOT.MXF.1.0.c1/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/BOOT.MXF.1.0.c1/
 
          #. Install the dependencies:
 
@@ -684,7 +684,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/TZ.XF.5.29.1/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/TZ.XF.5.29.1/trustzone_images/build/ms/
                   vi build_config_deploy_lemans.xml
                   # Edit all the occurrences of /pkg/qct/software/llvm/release/arm/16.0.7/ to <FIRMWARE_ROOT>/llvm/16.0.7/
 
@@ -702,7 +702,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/TZ.XF.5.29.1/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/TZ.XF.5.29.1/trustzone_images/build/ms/
                   python build_all.py -b TZ.XF.5.0 CHIPSET=lemans --cfg=build_config_deploy_lemans.xml
 
          .. rubric:: Build AOP firmware
@@ -720,7 +720,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/AOP.HO.3.6.1/aop_proc/build/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/AOP.HO.3.6.1/aop_proc/build/
 
          #. Clean the build:
 
@@ -764,10 +764,10 @@ Build firmware
       
               ::
 
-                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCS9100.LE.1.0/common/build
+                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.1.0/common/build
                 python build.py --imf
 
-         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCS9100.LE.1.0/common/build/ufs/bin`` directory:
+         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS9100.LE.1.0/common/build/ufs/bin`` directory:
 
             -  ``QCS9100_bootbinaries.zip``
             -  ``QCS9100_dspso.zip``
@@ -823,14 +823,14 @@ Build firmware
                   qsc-cli tool install --name sdllvm_arm --required-version 16.0.7 --path <FIRMWARE_ROOT>/llvm/16.0.7
                   chmod -R 777 <FIRMWARE_ROOT>/llvm/16.0.7
 
-         -  Export the ``SECTOOLS`` variable and compile the firmware builds (``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm`` is the top-level directory):
+         -  Export the ``SECTOOLS`` variable and compile the firmware builds (``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem`` is the top-level directory):
 
             .. container:: nohighlight
       
                ::
 
-                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux/sectools
-                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux               
+                  export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux/sectools
+                  export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux               
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor. Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qsc-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
             .. container:: nohighlight
@@ -876,7 +876,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/DSP.AT.1.0.1/dsp_proc/build/ms
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/DSP.AT.1.0.1/dsp_proc/build/ms
 
          #. Clean the build:
 
@@ -929,7 +929,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/BOOT.MXF.1.0.c1/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/BOOT.MXF.1.0.c1/
 
          #. Install the dependencies:
 
@@ -974,7 +974,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/TZ.XF.5.29.1/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/TZ.XF.5.29.1/trustzone_images/build/ms/
                   vi build_config_deploy_monaco.xml
                   # Edit all the occurrences of /pkg/qct/software/llvm/release/arm/16.0.7/ to <FIRMWARE_ROOT>/llvm/16.0.7/
 
@@ -992,7 +992,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/TZ.XF.5.29.1/trustzone_images/build/ms/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/TZ.XF.5.29.1/trustzone_images/build/ms/
                   python build_all.py -b TZ.XF.5.0 CHIPSET=monaco --cfg=build_config_deploy_monaco.xml
 
          .. rubric:: Build AOP firmware
@@ -1010,7 +1010,7 @@ Build firmware
       
                ::
 
-                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/AOP.HO.3.6.1/aop_proc/build/
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/AOP.HO.3.6.1/aop_proc/build/
 
          #. Clean the build:
 
@@ -1052,10 +1052,10 @@ Build firmware
          
               ::
 
-                 cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCS8300.LE.1.0/common/build
+                 cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.1.0/common/build
                  python build.py --imf
 
-         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm/QCS8300.LE.1.0/common/build/ufs/bin`` directory:
+         - Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/QCS8300.LE.1.0/common/build/ufs/bin`` directory:
                         
            -  ``QCS8300_bootbinaries.zip``
            -  ``QCS8300_dspso.zip``
@@ -1088,7 +1088,7 @@ The BSP image build has software components for the Qualcomm device support and 
 
          # CUST_ID is used to clone the proprietary source repositories downloaded by meta-qcom-extras.
          # It allows source compilation for the corresponding binaries present in meta-qcom.         
-         # CUST_ID must be set to "213195" for no-modem based distributions "qualcomm-linux-spf-2-0_ap_standard_oem_nm".         
+         # CUST_ID must be set to "213195" for no-modem based distributions "qualcomm-linux-spf-2-0_ap_standard_oem_nomodem".         
          # For other modem based distributions, CUST_ID must be set based on the "Customer ID".
          # To find "Customer ID", sign in to your account at qualcomm.com.
          # Click the Profile icon, select Account Settings, and then scroll down to the Company Information section.
