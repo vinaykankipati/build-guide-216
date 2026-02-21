@@ -376,14 +376,14 @@ Build
          touch <workspace_path>/downloads/git2/<local-name>.git.done
 
    For example, when ``do_fetch`` fails for
-   ``qualcomm_linux-spf-1-0-le-qclinux-1-0-r1_api-linux_history_prebuilts.git``, run the following command:
+   ``qualcomm_linux-spf-2-0-le-qclinux-1-0-r1_api-linux_history_prebuilts.git``, run the following command:
 
    .. container:: nohighlight
       
       ::
 
-         git clone --bare --mirror https://qpm-git.qualcomm.com/home2/git/revision-history/qualcomm_linux-spf-1-0-le-qclinux-1-0-r1_api-linux_history_prebuilts.git <workspace_path>/downloads/git2/qpm-git.qualcomm.com.home2.git.revision-history.qualcomm_linux-spf-1-0-le-qclinux-1-0-r1_api-linux_history_prebuilts.git
-         touch <workspace_path>/downloads/git2/qpm-git.qualcomm.com.home2.git.revision-history.qualcomm_linux-spf-1-0-le-qclinux-1-0-r1_api-linux_history_prebuilts.git.done
+         git clone --bare --mirror https://qpm-git.qualcomm.com/home2/git/revision-history/qualcomm_linux-spf-2-0-le-qclinux-1-0-r1_api-linux_history_prebuilts.git <workspace_path>/downloads/git2/qpm-git.qualcomm.com.home2.git.revision-history.qualcomm_linux-spf-2-0-le-qclinux-1-0-r1_api-linux_history_prebuilts.git
+         touch <workspace_path>/downloads/git2/qpm-git.qualcomm.com.home2.git.revision-history.qualcomm_linux-spf-2-0-le-qclinux-1-0-r1_api-linux_history_prebuilts.git.done
 
    After creating the ``.done`` file, proceed with the ``bitbake <image recipe>`` command. After completing the initial build,
    it's recommended to set up your own `download directory <https://docs.yoctoproject.org/4.0.16/singleindex.html#term-DL_DIR>`__.
@@ -406,7 +406,7 @@ Build
 
             git config --global core.symlinks true
 
--  "qpm-git.qualcomm.com.home2.git.revision-history.qualcomm_linux-spf-1-0-le-qclinux-1-0-r1_api-linux_history_prebuilts.git
+-  "qpm-git.qualcomm.com.home2.git.revision-history.qualcomm_linux-spf-2-0-le-qclinux-1-0-r1_api-linux_history_prebuilts.git
    –progress failed with exit code 128, no output"
 
    128 is a masking error and this error needs further triage as it can be a network issue at your end or a genuine issue accessing
@@ -432,7 +432,7 @@ Build
       
       ::
 
-         warning: redirecting to https://git-na-ssl.chipcode.qti.qualcomm.com/57f0ec058e47f7a82b2de7b95111c74a/qualcomm/qualcomm-linux-spf-1-0_ap_standard_oem_nomodem.git/
+         warning: redirecting to https://git-na-ssl.chipcode.qti.qualcomm.com/57f0ec058e47f7a82b2de7b95111c74a/qualcomm/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem.git/
          remote: Counting objects: 129803, done.
          remote: Compressing objects: 100% (114948/114948), done.
          fatal: write error: No space left on device5 GiB | 1.63 MiB/s
