@@ -1074,9 +1074,13 @@ The BSP image build has software components for the Qualcomm device support and 
 
          # NETRC_FILE env variable needs to be set for kas to pickup netrc credentials
          export NETRC_FILE="~/.netrc"
-         # cd to directory where you have 300 GB of free storage space to create your workspaces
-         mkdir <workspace-dir>
-         cd <workspace-dir>
+
+         cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem
+
+         # create directory where the BSP image will be built
+         mkdir LE.QCLINUX.2.0
+         cd LE.QCLINUX.2.0
+
          git clone https://github.com/qualcomm-linux/meta-qcom-extras-releases -b <meta-qcom-extras-release-tag>
          kas checkout meta-qcom-extras-releases/lock.yml
 
