@@ -536,11 +536,11 @@ Flash software using QDL
 
          # Built images are under <workspace_path>/build/tmp/deploy/images/<MACHINE>/<IMAGE>-<MACHINE>/
          # qdl <prog.mbn> [<program> <patch> ...]
+
          # For UFS storage
-         cp ./partition_ufs/gpt_main*.bin ./partition_ufs/gpt_backup*.bin ./partition_ufs/rawprogram[0-9].xml ./partition_ufs/patch*.xml ./partition_ufs/zeros_*sectors.bin ./
          <qdl_download_path>/QDL_<version>_<operating_system>_<architecture_type>/qdl --storage ufs prog_firehose_ddr.elf rawprogram*.xml patch*.xml
+
          # For EMMC storage
-         cp ./partition_emmc/gpt_main*.bin ./partition_emmc/gpt_backup*.bin ./partition_emmc/rawprogram[0-9].xml ./partition_emmc/patch*.xml ./partition_emmc/zeros_*sectors.bin ./
          <qdl_download_path>/QDL_<version>_<operating_system>_<architecture_type>/qdl --storage emmc prog_firehose_ddr.elf rawprogram0.xml patch0.xml
 
    .. note:: Use QDL binary based on the host computer architecture. For example, linux_x64 supported qdl binary is ``qdl_<version>/QDL_Linux_x64/qdl``.
