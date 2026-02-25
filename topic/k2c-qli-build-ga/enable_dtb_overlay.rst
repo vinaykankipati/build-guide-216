@@ -35,3 +35,34 @@ Run the following commands to apply the DTB Overlay:
      # Reboot to reflect the changes
      sync
      reboot
+
+Enable upstream video driver
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. note::
+   This section applies only to the IQ‑615‑EVK.
+
+IQ‑615‑EVK supports only the upstream video driver ``venus``. The video overlay functionality is
+not supported.
+
+When you flash and boot ``qcom-multimedia-proprietary-image`` the upstream video driver is 
+not enabled by default. This can be changed by updating the kernel module configuration.
+
+Run the following command to enable the upstream video driver:
+
+.. container:: nohighlight
+
+  ::
+
+    update-alternatives --install /etc/modprobe.d/blacklist-video.conf blacklist-video /etc/modprobe.d/blacklist-video.conf.vidc 200
+
+After rebooting the device, you can run ``lsmod`` to confirm if the changes have been applied.
+
+.. container:: nohighlight
+
+  ::
+
+    lsmod | grep venus
+    # Expected Output
+    # venus_enc           28672   0
+    # venus_dec           28672   0
