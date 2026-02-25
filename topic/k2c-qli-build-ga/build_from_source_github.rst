@@ -105,7 +105,10 @@ Create and build a Yocto Docker image:
          ls -al rootfs.img
 
 .. note::
-   For repo manifest based builds, refer to :ref:`Alternate Build Instructions via Manifest <howto_build>`
+   For repo manifest based builds, refer to :ref:`Alternate Build Instructions via Manifest <build_manifest>`
+
+.. note::
+   For building tip of meta-qcom, refer to :ref:`Building meta-qcom tip <build_tip>`
 
 Flash
 -----
