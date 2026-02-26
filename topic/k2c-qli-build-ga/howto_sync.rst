@@ -126,42 +126,5 @@ You can install the ``tree`` command and run it on your workspace. The Yocto wor
       
          |ws_qsc_cli_4|
 
-Refresh the workspace with a new download using QSC CLI
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-This option is supported only for the ``LE.QCLINUX.2.0`` image, which
-syncs the Yocto layers and prepares to build the Yocto workspace.
-This includes the following steps:
-
-1. Get to a Docker shell as mentioned in :ref:`Generate an eSDK <how_to_build_generate_sdk>`.
-
-#. Download a new release. For the ``<manifest release tag>`` information, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/doc/80-80020-300/>`__. An example ``<manifest release tag>`` is ``qcom-6.6.116-QLI.1.7-Ver.1.1.xml``.
-
-   .. container:: nohighlight
-      
-      ::
-
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <release tag>
-         repo sync
-
-#. Set up the build environment:
-
-   .. container:: nohighlight
-      
-      ::
-
-         MACHINE=<machine> DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         # Example, MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-
-   To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/doc/80-80020-300/>`__.
-
-#. Build the software image:
-
-   .. container:: nohighlight
-      
-      ::
-
-         bitbake qcom-multimedia-image
-
 .. |YoctoLEQCLinux| image:: ../../media/k2c-qli-build-ga/ws_qsc_cli_2.png
 .. |ws_qsc_cli_4| image:: ../../media/k2c-qli-build-ga/ws_qsc_cli_4.png
