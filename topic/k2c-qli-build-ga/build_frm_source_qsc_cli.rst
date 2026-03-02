@@ -1,4 +1,4 @@
-.. _build_from_source_qsc_cli:
+.. _build_frm_source_qsc_cli:
 
 .. rst_class:: flattenforhtml
 

@@ -466,7 +466,7 @@ Build firmware
 
          .. rubric:: Generate firmware prebuilds (boot-critical and split-firmware binaries)
 
-         - Rename the Bluetooth Firmware directory
+         - Rename the Bluetooth\ :sup:`®` firmware directory:
 
            .. container:: nohighlight
       
@@ -765,7 +765,7 @@ Build firmware
 
          .. rubric:: Generate firmware prebuilds (boot-critical and split-firmware binaries)
 
-         - Rename the Bluetooth Firmware directory
+         - Rename the Bluetooth\ :sup:`®` firmware directory:
 
            .. container:: nohighlight
       
@@ -1064,7 +1064,7 @@ Build firmware
 
          .. rubric:: Generate firmware prebuilds (boot-critical and split-firmware binaries)
 
-         - Rename the Bluetooth Firmware directory
+         - Rename the Bluetooth\ :sup:`®` firmware directory:
 
            .. container:: nohighlight
       

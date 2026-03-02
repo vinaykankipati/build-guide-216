@@ -13,7 +13,7 @@ Download prebuilt images and flash the software
 
 - In the `Release Notes <https://docs.qualcomm.com/doc/80-80020-300/topic/prebuilt_flashable_images_along_with_esdk.html>`__, go to the *Artifactory links to prebuilt flashable images and eSDK* table to download prebuilt flashable images and the Platform eSDK.
 
-.. note:: The Platform eSDK is an installer that allows you to synchronize, modify, compile, and install applications and open-source plug-ins within a complete Yocto environment.
+  .. note:: The Platform eSDK is an installer that allows you to synchronize, modify, compile, and install applications and open-source plug-ins within a complete Yocto environment.
 
 - To flash the prebuilt images, see :ref:`Flash software images <flash_images>`.
 
@@ -41,6 +41,11 @@ Sync, build, and flash the software
        - QSC command-line interface (CLI).
      * - :ref:`Build from source (with firmware and extras) <build_addn_info>`
        - :ref:`Build with QSC CLI <build_frm_source_qsc_cli>`
+
+.. 
+   .. container:: tagcenteralign
+
+   .. video:: ../../media/k2c-qli-build-ga/QSC.mp4
 
 .. only:: html
    
