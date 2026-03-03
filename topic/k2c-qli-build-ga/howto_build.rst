@@ -111,6 +111,25 @@ The machine configurations have either UFS or EMMC storage enabled by default. U
       # QCOM_PARTITION_FILES_SUBDIR ?= "partitions/iq-615-evk/emmc"
       # QCOM_PARTITION_FILES_SUBDIR ?= "partitions/iq-615-evk/ufs"
 
+Increasing swap space
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+If the build fails due to an out‑of‑memory (OOM) error, consider expanding the system’s
+swap space to more than 32GB. Run the following commands to increase swap space
+
+   .. container:: nohighlight
+      
+      ::
+
+         sudo su root
+         swapon --show
+         swapoff /swapfile
+         fallocate -l 64G /swapfile
+         chmod 600 /swapfile
+         mkswap /swapfile
+         swapon /swapfile
+         free -h
+
 Check if the build is complete
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
