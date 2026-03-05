@@ -1,5 +1,8 @@
 .. _enable_dtb_overlay:
 
+Configure alternative drivers
+-------------------------------
+
 Enable camera overlays
 ^^^^^^^^^^^^^^^^^^^^^^
 
