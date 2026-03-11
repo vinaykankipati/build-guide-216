@@ -22,11 +22,11 @@ The following table describes the Qualcomm Yocto layers and release tags:
    * - Public developers (unregistered)
      - ``meta-qcom``
      - meta-qcom-releases tag
-     - qcom-6.18-QLI.2.0-Ver.1.0
+     - qli-2.0-rc2
    * - See :ref:`Mapping access levels to firmware distributions <build_mapping_access_levels>`
      - NA
      - firmware release tag
-     - r2.0_00001.1
+     - r2.0_00002.0
 
 The following tables describe the firmware distributions that you can download. For more information about the Yocto layers, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-80020-27/qualcomm_linux_metadata_layers.html>`__.
 
@@ -103,7 +103,7 @@ The following ``git clone`` command downloads the selected firmware components i
       mkdir -p <FIRMWARE_ROOT>
       cd <FIRMWARE_ROOT>
       git clone -b <firmware release tag> --depth 1 https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem.git
-      # Example, <firmware release tag> is r2.0_00001.1
+      # Example, <firmware release tag> is r2.0_00002.0
 
 The ``git clone`` command clones the content into the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm`` directory. For the latest ``<firmware release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/doc/80-80020-300/>`__.
 
@@ -1037,7 +1037,7 @@ The BSP image build has software components to support the Qualcomm device and s
          cd LE.QCLINUX.2.0
 
          git clone https://github.com/qualcomm-linux/meta-qcom-releases -b <meta-qcom-release-tag>
-         # Example, git clone https://github.com/qualcomm-linux/meta-qcom-releases -b qli-2.0-rc1 
+         # Example, git clone https://github.com/qualcomm-linux/meta-qcom-releases -b qli-2.0-rc2 
 
          kas checkout meta-qcom-releases/lock.yml
 
