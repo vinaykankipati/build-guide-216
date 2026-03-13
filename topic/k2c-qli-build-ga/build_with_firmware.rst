@@ -22,15 +22,11 @@ The following table describes the Qualcomm Yocto layers and release tags:
    * - Public developers (unregistered)
      - ``meta-qcom``
      - meta-qcom-releases tag
-     - qcom-6.18-QLI.2.0-Ver.1.0
-   * - Licensed developers with authorized access
-     - ``meta-qcom-extras``
-     - meta-qcom-extras-release tag
-     - qcom-6.18-QLI.2.0-Ver.1.0
+     - qli-2.0-rc2
    * - See :ref:`Mapping access levels to firmware distributions <build_mapping_access_levels>`
      - NA
      - firmware release tag
-     - r2.0_00001.1
+     - r2.0_00002.0
 
 The following tables describe the firmware distributions that you can download. For more information about the Yocto layers, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-80020-27/qualcomm_linux_metadata_layers.html>`__.
 
@@ -53,7 +49,6 @@ The following tables describe the firmware distributions that you can download. 
 
        ``meta-qcom-distro``
        
-       ``meta-qcom-extras``
    * - :rspan:`2` Licensed developers (contact Qualcomm for access)
      - BSP build: High-level OS and firmware (GPS only) source
        
@@ -63,7 +58,6 @@ The following tables describe the firmware distributions that you can download. 
 
        ``meta-qcom-distro``
 
-       ``meta-qcom-extras``
    *  
      - BSP build: High-level OS and firmware (GPS and modem) source
       
@@ -72,7 +66,6 @@ The following tables describe the firmware distributions that you can download. 
 
        ``meta-qcom-distro``
 
-       ``meta-qcom-extras``
 
 The following table maps the firmware distributions to git repositories: 
 
@@ -110,7 +103,7 @@ The following ``git clone`` command downloads the selected firmware components i
       mkdir -p <FIRMWARE_ROOT>
       cd <FIRMWARE_ROOT>
       git clone -b <firmware release tag> --depth 1 https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem.git
-      # Example, <firmware release tag> is r2.0_00001.1
+      # Example, <firmware release tag> is r2.0_00002.0
 
 The ``git clone`` command clones the content into the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nm`` directory. For the latest ``<firmware release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/doc/80-80020-300/>`__.
 
@@ -432,15 +425,6 @@ Build firmware
 
          .. rubric:: Generate firmware prebuilds (boot-critical and split-firmware binaries)
 
-         - Rename the Bluetooth\ :sup:`®` firmware directory:
-
-           .. container:: nohighlight
-      
-              ::
-
-                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/
-                mv btfw.hsp BTFW.HSP.2.1.2
-
          - Create an integrated firmware binary from the individual components that you compiled:
 
            .. container:: nohighlight
@@ -730,15 +714,6 @@ Build firmware
          Qualcomm releases the WLAN firmware as a binary and you don't need to compile the build.
 
          .. rubric:: Generate firmware prebuilds (boot-critical and split-firmware binaries)
-
-         - Rename the Bluetooth\ :sup:`®` firmware directory:
-
-           .. container:: nohighlight
-      
-              ::
-
-                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/
-                mv btfw.hsp BTFW.HSP.2.1.2
 
          - Create an integrated firmware binary from the individual components that you compiled:
 
@@ -1030,15 +1005,6 @@ Build firmware
 
          .. rubric:: Generate firmware prebuilds (boot-critical and split-firmware binaries)
 
-         - Rename the Bluetooth\ :sup:`®` firmware directory:
-
-           .. container:: nohighlight
-      
-              ::
-
-                cd <FIRMWARE_ROOT>/qualcomm-linux-spf-2-0_ap_standard_oem_nomodem/
-                mv btfw.hsp BTFW.HSP.2.1.2
-
          - Create an integrated firmware binary from the individual components that you compiled:
 
            .. container:: nohighlight
@@ -1071,7 +1037,7 @@ The BSP image build has software components to support the Qualcomm device and s
          cd LE.QCLINUX.2.0
 
          git clone https://github.com/qualcomm-linux/meta-qcom-releases -b <meta-qcom-release-tag>
-         # Example, git clone https://github.com/qualcomm-linux/meta-qcom-releases -b qli-2.0-rc1 
+         # Example, git clone https://github.com/qualcomm-linux/meta-qcom-releases -b qli-2.0-rc2 
 
          kas checkout meta-qcom-releases/lock.yml
 
@@ -1095,9 +1061,9 @@ The BSP image build has software components to support the Qualcomm device and s
       
       ::
 
-         kas build meta-qcom/ci/<machine.yml>:meta-qcom/ci/<distro.yml>:meta-qcom/ci/linux-qcom-6.18.yml:meta-qcom/ci/lock.yml
+         kas shell -c "devtool build-image <image-recipe>" meta-qcom/ci/<machine.yml>:meta-qcom/ci/<distro.yml>:meta-qcom/ci/linux-qcom-6.18.yml:meta-qcom/ci/lock.yml
 
-         # Example, kas build meta-qcom/ci/iq-9075-evk.yml:meta-qcom/ci/qcom-distro-prop-image.yml:meta-qcom/ci/linux-qcom-6.18.yml:meta-qcom/ci/lock.yml
+         # Example, kas shell -c "devtool build-image qcom-multimedia-proprietary-image" meta-qcom/ci/iq-9075-evk.yml:meta-qcom/ci/qcom-distro-prop-image.yml:meta-qcom/ci/linux-qcom-6.18.yml:meta-qcom/ci/lock.yml
 
    For various ``<machine>`` and ``<distro>`` combinations, see `Release Notes <https://docs.qualcomm.com/doc/80-80020-300/>`__.
 
